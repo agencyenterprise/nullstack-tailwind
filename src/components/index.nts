@@ -21,3 +21,6 @@ export { default as Checkbox } from "./forms/Checkbox";
 
 // Feedbacks
 export { default as Alert } from "./feedbacks/Alert";
+
+// Overlays
+export { default as Modal } from "./overlays/Modal";

@@ -13,12 +13,14 @@ import {
   Table,
   Checkbox,
   Avatar,
+  Modal,
 } from "./components";
 
 import "./styles.css";
 import Alert from "./components/feedbacks/Alert.nts";
 
 class Application extends Nullstack {
+  modalVisible = false;
   user = {
     email: "",
     about: "Something about me...",
@@ -234,6 +236,55 @@ class Application extends Nullstack {
                   </p>
                 </div>
               </Alert>
+            </div>
+          </Panel>
+          <Panel class="mt-4">
+            <h1 class="text-2xl font-semibold text-gray-900">Overlays</h1>
+            <div class="mt-4">
+              <Button onclick={() => (this.modalVisible = true)}>
+                Show Modal
+              </Button>
+              <Modal visible={this.modalVisible}>
+                <Modal.Close onclick={() => (this.modalVisible = false)} />
+                <Modal.Body>
+                  <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
+                    <svg
+                      class="h-6 w-6 text-green-600"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      aria-hidden="true"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <div class="mt-3 text-center sm:mt-5">
+                    <h3
+                      class="text-lg leading-6 font-medium text-gray-900"
+                      id="modal-title"
+                    >
+                      Payment successful
+                    </h3>
+                    <div class="mt-2">
+                      <p class="text-sm text-gray-500">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Consequatur amet labore.
+                      </p>
+                    </div>
+                  </div>
+                </Modal.Body>
+                <Modal.Footer>
+                  <Button onclick={() => (this.modalVisible = false)}>
+                    Go back to dashboard
+                  </Button>
+                </Modal.Footer>
+              </Modal>
             </div>
           </Panel>
         </div>
