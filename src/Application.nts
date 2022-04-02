@@ -60,6 +60,7 @@ class Application extends Nullstack {
                 error=""
                 placeholder="foo@bar.com"
                 helper="Example description"
+                corner="Optional"
               />
             </div>
             <div class="mt-4">

@@ -8,16 +8,23 @@ interface InputProps {
   label?: string;
   placeholder?: string;
   helper?: string;
+  corner?: string;
   error?: string;
   type?: string;
 }
 
 export default function Input(props: InputProps) {
-  const { label, id, type, placeholder, name, source, error, helper } = props;
+  const { label, id, type, placeholder, name, source, error, helper, corner } =
+    props;
 
   return (
     <div>
-      <Label for={id}>{label}</Label>
+      <div class="flex justify-between">
+        <Label for={id}>{label}</Label>
+        <span class="text-sm text-gray-500" id={id}>
+          {corner}
+        </span>
+      </div>
       <div class="mt-1 relative rounded-md shadow-sm">
         <input
           type={type}
