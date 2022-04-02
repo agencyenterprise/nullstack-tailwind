@@ -1,0 +1,23 @@
+import Nullstack from 'nullstack';
+import TodoCounter from './TodoCounter';
+import TodoList from './TodoList';
+import { ApplicationClientContext } from './types';
+
+class Application extends Nullstack {
+
+  prepare({ page }: ApplicationClientContext) {
+    page.locale = 'pt-BR';
+  }
+
+  render() {
+    return (
+      <main>
+        <TodoList />
+        <TodoCounter />
+      </main>
+    )
+  }
+
+}
+
+export default Application;
