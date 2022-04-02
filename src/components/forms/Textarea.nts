@@ -1,5 +1,5 @@
-import Label from "../elements/Label";
-import Helper from "../elements/Helper";
+import Label from "../elements/Label.nts";
+import Helper from "../elements/Helper.nts";
 
 interface TextareaProps {
   name: string;
@@ -10,6 +10,16 @@ interface TextareaProps {
   disabled?: boolean;
 }
 
+/**
+ * @name Textarea
+ * @param {?number} rows
+ * @param {?string} label
+ * @param {?string} helper
+ * @param {?boolean} disabled
+ * @returns {Element}
+ * @example
+ * <Textarea label="Comments" rows={6} bind={this.user.about} />
+ */
 export default function Textarea(props: TextareaProps) {
   const { label, name, rows = 4, source, helper, disabled = false } = props;
   const id = `${name}-textarea`;

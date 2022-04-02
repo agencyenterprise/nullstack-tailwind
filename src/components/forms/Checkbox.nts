@@ -1,6 +1,6 @@
 import Nullstack from "nullstack";
-import Label from "../elements/Label";
-import Helper from "../elements/Helper";
+import Label from "../elements/Label.nts";
+import Helper from "../elements/Helper.nts";
 import { classList } from "../../utils";
 
 interface CheckboxProps {
@@ -14,6 +14,16 @@ interface CheckboxProps {
   disabled?: boolean;
 }
 
+/**
+ * @name Checkbox
+ * @param {?string} class
+ * @param {?string} description
+ * @param {?boolean} disabled
+ * @param {?string} id
+ * @returns {Element}
+ * @example
+ * <Checkbox label="Comments" description="Get notified when someones posts a comment on a posting." bind={this.user.allowNotification} />
+ */
 class Checkbox extends Nullstack {
   toggle({ onclick, source, name }) {
     source[name] = !source[name];

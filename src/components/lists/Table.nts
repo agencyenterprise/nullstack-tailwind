@@ -1,5 +1,40 @@
-const Table = ({ children, class: klass }) => (
+/**
+ * @name Table
+ * @param {?string} id
+ * @param {?string} class
+ * @param {?Element} children
+ * @returns {Element}
+ * @example
+ * <Table>
+ *  <Table.THead>
+ *      <Table.TR>
+ *      <Table.TH>Name</Table.TH>
+ *      <Table.TH>Title</Table.TH>
+ *      <Table.TH>Email</Table.TH>
+ *      <Table.TH>Role</Table.TH>
+ *      <Table.TH>Actions</Table.TH>
+ *    </Table.TR>
+ *  </Table.THead>
+ *  <Table.TBody>
+ *    <Table.TR>
+ *      <Table.TD class="font-medium text-gray-900">
+ *        Lindsay Walton
+ *      </Table.TD>
+ *      <Table.TD>Front-end Developer</Table.TD>
+ *      <Table.TD>lindsay.walton@example.com</Table.TD>
+ *      <Table.TD>Member</Table.TD>
+ *      <Table.TD>
+ *        <a href="#" class="text-indigo-600 hover:text-indigo-900">
+ *          Edit
+ *        </a>
+ *      </Table.TD>
+ *    </Table.TR>
+ *  </Table.TBody>
+ * </Table>
+ */
+const Table = ({ id, children, class: klass }) => (
   <table
+    id={id}
     class={"min-w-full divide-y divide-gray-300 align-middle".concat(
       klass ? ` ${klass}` : ""
     )}

@@ -1,5 +1,5 @@
-import Label from "../elements/Label";
-import Helper from "../elements/Helper";
+import Label from "../elements/Label.nts";
+import Helper from "../elements/Helper.nts";
 import { classList } from "../../utils";
 
 interface InputProps {
@@ -14,6 +14,28 @@ interface InputProps {
   type?: string;
 }
 
+/**
+ * @name Input
+ * @param {?string} id
+ * @param {?string} class
+ * @param {?string} placeholder
+ * @param {?string} helper
+ * @param {?string} corner
+ * @param {?string} error
+ * @param {?string} type
+ * @param {?boolean} disabled
+ * @returns {Element}
+ * @example
+ * <Input
+ *  label="Email"
+ *  type="email"
+ *  bind={this.user.email}
+ *  error="Invalid e-mail"
+ *  placeholder="foo@bar.com"
+ *  helper="Example description"
+ *  corner="Optional"
+ * />
+ */
 export default function Input(props: InputProps) {
   const { label, id, type, placeholder, name, source, error, helper, corner } =
     props;

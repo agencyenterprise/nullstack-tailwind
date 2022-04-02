@@ -5,6 +5,18 @@ interface ButtonGroupProps {
   children: string;
 }
 
+/**
+ * @name ButtonGroup
+ * @param {!Element} children
+ * @param {?string} class
+ * @returns {Element}
+ * @example
+ * <ButtonGroup>
+ *  <Button class="rounded-r-none">Years</Button>
+ *  <Button class="rounded-none">Months</Button>
+ *  <Button class="rounded-l-none">Days</Button>
+ * </ButtonGroup>
+ */
 export default function ButtonGroup(props: ButtonGroupProps) {
   const { class: klass, children } = props;
 

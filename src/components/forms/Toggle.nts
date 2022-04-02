@@ -9,6 +9,14 @@ interface ToggleProps {
   onclick?: () => void;
 }
 
+/**
+ * @name Toggle
+ * @param {?string} label
+ * @param {?boolean} disabled
+ * @returns {Element}
+ * @example
+ * <Toggle label="Notifications" bind={this.user.allowNotification} />
+ */
 class Toggle extends Nullstack {
   toggle({ onclick, source, name }) {
     source[name] = !source[name];

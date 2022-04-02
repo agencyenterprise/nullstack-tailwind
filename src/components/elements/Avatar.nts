@@ -7,6 +7,14 @@ interface AvatarProps {
   class?: string;
 }
 
+/**
+ * @name Avatar
+ * @param {?string} src
+ * @param {?string} alt
+ * @param {?string} placeholder
+ * @returns {Element}
+ * @example <Avatar class="h-10 w-10" src="https://avatars0.githubusercontent.com/u/1234?s=460&v=4" alt="Avatar" />
+ */
 export default function Avatar(props: AvatarProps) {
   const { src, alt, class: klass, placeholder } = props;
 

@@ -7,6 +7,15 @@ interface ButtonProps {
   onclick?: () => void;
 }
 
+/**
+ * @name Button
+ * @param {!Element} children
+ * @param {?function} onclick
+ * @param {?string} class
+ * @param {?string} type
+ * @returns {Element}
+ * @example <Button onclick={() => alert("Hello")}>Hello</Button>
+ */
 export default function Button(props: ButtonProps) {
   const { type = "button", class: klass, onclick, children } = props;
 

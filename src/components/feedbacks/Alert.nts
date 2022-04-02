@@ -2,11 +2,20 @@ import { classList } from "../../utils";
 
 interface AlertProps {
   variant: "success" | "info" | "warning" | "danger";
-  children: string;
+  children: Element;
   class?: string;
   icon?: string;
 }
 
+/**
+ * @name Alert
+ * @param {?("success" | "info" | "warning" | "danger")} variant
+ * @param {?SVGElement} icon
+ * @param {?string} class
+ * @param {!Element} children
+ * @returns {Element}
+ * @example <Alert variant="success" icon={<Icon name="check" />}>Something here...</Alert>
+ */
 export default function Alert(props: AlertProps) {
   const { variant = "info", icon, children, class: klass } = props;
 

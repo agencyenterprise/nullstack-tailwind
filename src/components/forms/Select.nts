@@ -1,16 +1,29 @@
-import Label from "../elements/Label";
-import Helper from "../elements/Helper";
+import Label from "../elements/Label.nts";
+import Helper from "../elements/Helper.nts";
 
 interface SelectProps {
   name: string;
   source: string;
-  options: string[];
   children: string;
   label?: string;
   helper?: string;
   disabled?: boolean;
 }
 
+/**
+ * @name Select
+ * @param {?string} label
+ * @param {?string} helper
+ * @param {?Element} children
+ * @param {?boolean} disabled
+ * @returns {Element}
+ * @example
+ * <Select label="Country" helper="Select your country">
+ *  <option value="">Select your country</option>
+ *  <option value="US">United States</option>
+ *  <option value="CA">Canada</option>
+ * </Select>
+ */
 export default function Select(props: SelectProps) {
   const { label, name, source, children, helper, disabled } = props;
   const id = `${name}-select`;

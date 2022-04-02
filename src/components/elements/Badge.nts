@@ -5,6 +5,13 @@ interface BadgeProps {
   class?: string;
 }
 
+/**
+ * @name Badge
+ * @param {!Element} children
+ * @param {?string} class
+ * @returns {Element}
+ * @example <Badge>Example</Badge>
+ */
 export default function Badge(props: BadgeProps) {
   const { class: klass, children } = props;
 
