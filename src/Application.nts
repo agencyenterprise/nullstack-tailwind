@@ -1,12 +1,15 @@
 import Nullstack from "nullstack";
 import { ApplicationClientContext } from "./types";
 import Container from "./layouts/Container.nts";
-import Button from "./components/elements/Button";
-import Badge from "./components/elements/Badge";
-import Toggle from "./components/forms/Toggle";
-import Input from "./components/forms/Input";
-import Select from "./components/forms/Select";
-import Panel from "./components/layouts/Panel";
+import {
+  Button,
+  Badge,
+  Toggle,
+  Input,
+  Select,
+  Panel,
+  Table,
+} from "./components";
 
 import "./styles.css";
 
@@ -57,6 +60,30 @@ class Application extends Nullstack {
                 <option value="US">United States</option>
                 <option value="BR">Brazil</option>
               </Select>
+            </div>
+            <div class="mt-4">
+              <Table>
+                <Table.Head>
+                  <Table.HeadRow>Name</Table.HeadRow>
+                  <Table.HeadRow>Title</Table.HeadRow>
+                  <Table.HeadRow>Email</Table.HeadRow>
+                  <Table.HeadRow>Role</Table.HeadRow>
+                  <Table.HeadRow>Actions</Table.HeadRow>
+                </Table.Head>
+                <Table.Body>
+                  <Table.BodyRow class="font-medium text-gray-900">
+                    Lindsay Walton
+                  </Table.BodyRow>
+                  <Table.BodyRow>Front-end Developer</Table.BodyRow>
+                  <Table.BodyRow>lindsay.walton@example.com</Table.BodyRow>
+                  <Table.BodyRow>Member</Table.BodyRow>
+                  <Table.BodyRow>
+                    <a href="#" class="text-indigo-600 hover:text-indigo-900">
+                      Edit
+                    </a>
+                  </Table.BodyRow>
+                </Table.Body>
+              </Table>
             </div>
           </Panel>
         </div>

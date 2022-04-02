@@ -1,8 +1,14 @@
-export default function Panel(props) {
+interface PanelProps {
+  children: string;
+}
+
+export default function Panel(props: PanelProps) {
+  const { children } = props;
+
   return (
-    <div class="max-w-4xl  mx-auto">
+    <div class="max-w-4xl mx-auto">
       <div class="bg-white overflow-hidden shadow rounded-lg">
-        <div class="px-4 py-5 sm:p-6">{props.children}</div>
+        <div class="px-4 py-5 sm:p-6">{children}</div>
       </div>
     </div>
   );

@@ -1,0 +1,50 @@
+const Table = ({ children, class: klass }) => (
+  <table
+    class={"min-w-full divide-y divide-gray-300 align-middle".concat(
+      klass ? ` ${klass}` : ""
+    )}
+  >
+    {children}
+  </table>
+);
+
+Table.THead = ({ children, class: klass }) => (
+  <thead class={"bg-gray-50".concat(klass ? ` ${klass}` : "")}>
+    {children}
+  </thead>
+);
+
+Table.TH = ({ children, class: klass }) => (
+  <th
+    scope="col"
+    class={"px-3 py-3.5 text-left text-sm font-semibold text-gray-900".concat(
+      klass
+    )}
+  >
+    {children}
+  </th>
+);
+
+Table.TBody = ({ children, class: klass }) => (
+  <tbody
+    class={"divide-y divide-gray-200 bg-white".concat(klass ? ` ${klass}` : "")}
+  >
+    {children}
+  </tbody>
+);
+
+Table.TR = ({ children, class: klass }) => (
+  <tr class={klass ? klass : ""}>{children}</tr>
+);
+
+Table.TD = ({ children, class: klass }) => (
+  <td
+    class={"whitespace-nowrap px-3 py-4 text-sm text-gray-500".concat(
+      klass ? ` ${klass}` : ""
+    )}
+  >
+    {children}
+  </td>
+);
+
+export default Table;
