@@ -1,3 +1,5 @@
+import { classList } from "../../utils";
+
 interface AvatarProps {
   src: string;
   placeholder?: string;
@@ -12,8 +14,9 @@ export default function Avatar(props: AvatarProps) {
   if (placeholder) {
     return (
       <span
-        class={`inline-flex items-center justify-center h-${size} w-${size} rounded-full bg-gray-500`.concat(
-          klass ? ` ${klass}` : ""
+        class={classList(
+          `inline-flex items-center justify-center h-${size} w-${size} rounded-full bg-gray-500`,
+          klass
         )}
       >
         <span class="font-medium leading-none text-white">{placeholder}</span>

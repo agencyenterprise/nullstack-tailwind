@@ -1,3 +1,5 @@
+import { classList } from "../../utils";
+
 interface BadgeProps {
   children: string;
   class?: string;
@@ -9,8 +11,9 @@ export default function Badge(props: BadgeProps) {
 
   return (
     <span
-      class={`inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-${color}-100 text-${color}-800`.concat(
-        klass ? ` ${klass}` : ""
+      class={classList(
+        `inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-${color}-100 text-${color}-800`,
+        klass
       )}
     >
       {children}

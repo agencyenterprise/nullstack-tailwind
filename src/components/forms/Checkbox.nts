@@ -1,6 +1,7 @@
 import Nullstack from "nullstack";
 import Label from "../elements/Label";
 import Helper from "../elements/Helper";
+import { classList } from "../../utils";
 
 interface CheckboxProps {
   name: string;
@@ -38,8 +39,9 @@ class Checkbox extends Nullstack {
             id={id}
             aria-describedby={id}
             type="checkbox"
-            class={"focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded".concat(
-              klass ? ` ${klass}` : ""
+            class={classList(
+              "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded",
+              klass
             )}
             checked={checked}
             disabled={disabled}

@@ -1,3 +1,5 @@
+import { classList } from "../../utils";
+
 interface ButtonGroupProps {
   class?: string;
   children: string;
@@ -8,9 +10,7 @@ export default function ButtonGroup(props: ButtonGroupProps) {
 
   return (
     <span
-      class={"relative z-0 inline-flex shadow-sm rounded-md".concat(
-        klass ? ` ${klass}` : ""
-      )}
+      class={classList("relative z-0 inline-flex shadow-sm rounded-md", klass)}
     >
       {children}
     </span>

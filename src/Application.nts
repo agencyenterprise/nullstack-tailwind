@@ -91,7 +91,7 @@ class Application extends Nullstack {
                 label="Email"
                 type="email"
                 bind={this.user.email}
-                error=""
+                error="dassda"
                 placeholder="foo@bar.com"
                 helper="Example description"
                 corner="Optional"

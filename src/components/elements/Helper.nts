@@ -1,3 +1,5 @@
+import { classList } from "../../utils";
+
 interface HelperProps {
   class?: string;
   children: string;
@@ -7,8 +9,6 @@ export default function Helper(props: HelperProps) {
   const { class: klass, children } = props;
 
   return (
-    <p class={"mt-2 text-sm text-gray-500".concat(klass ? ` ${klass}` : "")}>
-      {children}
-    </p>
+    <p class={classList("mt-2 text-sm text-gray-500", klass)}>{children}</p>
   );
 }

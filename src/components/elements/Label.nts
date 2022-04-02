@@ -1,3 +1,5 @@
+import { classList } from "../../utils";
+
 interface LabelProps {
   for?: string;
   class?: string;
@@ -10,9 +12,7 @@ export default function Label(props: LabelProps) {
   return (
     <label
       for={receivedFor}
-      class={"block text-sm font-medium text-gray-700".concat(
-        klass ? ` ${klass}` : ""
-      )}
+      class={classList("block text-sm font-medium text-gray-700", klass)}
     >
       {children}
     </label>
