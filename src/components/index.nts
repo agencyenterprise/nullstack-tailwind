@@ -12,3 +12,4 @@ export { default as Table } from "./lists/Table";
 export { default as Toggle } from "./forms/Toggle";
 export { default as Input } from "./forms/Input";
 export { default as Select } from "./forms/Select";
+export { default as Checkbox } from "./forms/Checkbox";

@@ -9,6 +9,7 @@ import {
   Select,
   Panel,
   Table,
+  Checkbox,
 } from "./components";
 
 import "./styles.css";
@@ -18,6 +19,7 @@ class Application extends Nullstack {
     email: "",
     active: false,
     country: "BR",
+    allowNotification: true,
   };
 
   prepare({ page }: ApplicationClientContext) {
@@ -62,27 +64,38 @@ class Application extends Nullstack {
               </Select>
             </div>
             <div class="mt-4">
+              <Checkbox
+                label="Comments"
+                description="Get notified when someones posts a comment on a posting."
+                bind={this.user.allowNotification}
+              />
+            </div>
+            <div class="mt-4">
               <Table>
-                <Table.Head>
-                  <Table.HeadRow>Name</Table.HeadRow>
-                  <Table.HeadRow>Title</Table.HeadRow>
-                  <Table.HeadRow>Email</Table.HeadRow>
-                  <Table.HeadRow>Role</Table.HeadRow>
-                  <Table.HeadRow>Actions</Table.HeadRow>
-                </Table.Head>
-                <Table.Body>
-                  <Table.BodyRow class="font-medium text-gray-900">
-                    Lindsay Walton
-                  </Table.BodyRow>
-                  <Table.BodyRow>Front-end Developer</Table.BodyRow>
-                  <Table.BodyRow>lindsay.walton@example.com</Table.BodyRow>
-                  <Table.BodyRow>Member</Table.BodyRow>
-                  <Table.BodyRow>
-                    <a href="#" class="text-indigo-600 hover:text-indigo-900">
-                      Edit
-                    </a>
-                  </Table.BodyRow>
-                </Table.Body>
+                <Table.THead>
+                  <Table.TR>
+                    <Table.TH>Name</Table.TH>
+                    <Table.TH>Title</Table.TH>
+                    <Table.TH>Email</Table.TH>
+                    <Table.TH>Role</Table.TH>
+                    <Table.TH>Actions</Table.TH>
+                  </Table.TR>
+                </Table.THead>
+                <Table.TBody>
+                  <Table.TR>
+                    <Table.TD class="font-medium text-gray-900">
+                      Lindsay Walton
+                    </Table.TD>
+                    <Table.TD>Front-end Developer</Table.TD>
+                    <Table.TD>lindsay.walton@example.com</Table.TD>
+                    <Table.TD>Member</Table.TD>
+                    <Table.TD>
+                      <a href="#" class="text-indigo-600 hover:text-indigo-900">
+                        Edit
+                      </a>
+                    </Table.TD>
+                  </Table.TR>
+                </Table.TBody>
               </Table>
             </div>
           </Panel>
