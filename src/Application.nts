@@ -16,6 +16,7 @@ import {
 } from "./components";
 
 import "./styles.css";
+import Alert from "./components/feedbacks/Alert.nts";
 
 class Application extends Nullstack {
   user = {
@@ -35,7 +36,7 @@ class Application extends Nullstack {
       <Container>
         <div class="max-w-4xl  mx-auto">
           <Panel>
-            <h1 class="text-2xl font-semibold text-gray-900">Components</h1>
+            <h1 class="text-2xl font-semibold text-gray-900">Elements</h1>
             <div class="mt-4">
               <Button>Example</Button>
             </div>
@@ -82,7 +83,9 @@ class Application extends Nullstack {
                 <Badge color="red">Example</Badge>
               </div>
             </div>
-            <h2 class="text-1xl font-semibold text-gray-900 mt-4">Forms</h2>
+          </Panel>
+          <Panel class="mt-4">
+            <h1 class="text-2xl font-semibold text-gray-900">Forms</h1>
             <div class="mt-4">
               <Toggle bind={this.user.active} />
             </div>
@@ -122,6 +125,9 @@ class Application extends Nullstack {
                 bind={this.user.allowNotification}
               />
             </div>
+          </Panel>
+          <Panel class="mt-4">
+            <h1 class="text-2xl font-semibold text-gray-900">Lists</h1>
             <div class="mt-4">
               <Table>
                 <Table.THead>
@@ -147,8 +153,87 @@ class Application extends Nullstack {
                       </a>
                     </Table.TD>
                   </Table.TR>
+                  <Table.TR>
+                    <Table.TD class="font-medium text-gray-900">
+                      Lindsay Walton
+                    </Table.TD>
+                    <Table.TD>Front-end Developer</Table.TD>
+                    <Table.TD>lindsay.walton@example.com</Table.TD>
+                    <Table.TD>Member</Table.TD>
+                    <Table.TD>
+                      <a href="#" class="text-indigo-600 hover:text-indigo-900">
+                        Edit
+                      </a>
+                    </Table.TD>
+                  </Table.TR>
+                  <Table.TR>
+                    <Table.TD class="font-medium text-gray-900">
+                      Lindsay Walton
+                    </Table.TD>
+                    <Table.TD>Front-end Developer</Table.TD>
+                    <Table.TD>lindsay.walton@example.com</Table.TD>
+                    <Table.TD>Member</Table.TD>
+                    <Table.TD>
+                      <a href="#" class="text-indigo-600 hover:text-indigo-900">
+                        Edit
+                      </a>
+                    </Table.TD>
+                  </Table.TR>
                 </Table.TBody>
               </Table>
+            </div>
+          </Panel>
+          <Panel class="mt-4">
+            <h1 class="text-2xl font-semibold text-gray-900">Feedbacks</h1>
+            <div class="mt-4">
+              <Alert class="flex-1 md:flex md:justify-between">
+                <h3 class="text-sm font-medium text-blue-800">Info</h3>
+                <p class="text-sm text-blue-700">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Aliquid pariatur, ipsum similique veniam.
+                </p>
+                <p class="mt-3 text-sm md:mt-0 md:ml-6">
+                  <a
+                    href="#"
+                    class="whitespace-nowrap font-medium text-blue-700 hover:text-blue-600"
+                  >
+                    Details <span aria-hidden="true">&rarr;</span>
+                  </a>
+                </p>
+              </Alert>
+            </div>
+            <div class="mt-4">
+              <Alert variant="success">
+                <h3 class="text-sm font-medium text-green-800">Success</h3>
+                <div class="mt-2 text-sm text-green-700">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aliquid pariatur, ipsum similique veniam.
+                  </p>
+                </div>
+              </Alert>
+            </div>
+            <div class="mt-4">
+              <Alert variant="warning">
+                <h3 class="text-sm font-medium text-yellow-800">Warning</h3>
+                <div class="mt-2 text-sm text-yellow-700">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aliquid pariatur, ipsum similique veniam.
+                  </p>
+                </div>
+              </Alert>
+            </div>
+            <div class="mt-4">
+              <Alert variant="danger">
+                <h3 class="text-sm font-medium text-red-800">Danger</h3>
+                <div class="mt-2 text-sm text-red-700">
+                  <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Aliquid pariatur, ipsum similique veniam.
+                  </p>
+                </div>
+              </Alert>
             </div>
           </Panel>
         </div>
