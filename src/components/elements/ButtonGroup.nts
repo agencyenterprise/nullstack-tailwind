@@ -1,0 +1,18 @@
+interface ButtonGroupProps {
+  class?: string;
+  children: string;
+}
+
+export default function ButtonGroup(props: ButtonGroupProps) {
+  const { class: klass, children } = props;
+
+  return (
+    <span
+      class={"relative z-0 inline-flex shadow-sm rounded-md".concat(
+        klass ? ` ${klass}` : ""
+      )}
+    >
+      {children}
+    </span>
+  );
+}

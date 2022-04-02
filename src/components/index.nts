@@ -3,6 +3,7 @@ export { default as Button } from "./elements/Button";
 export { default as Badge } from "./elements/Badge";
 export { default as Label } from "./elements/Label";
 export { default as Helper } from "./elements/Helper";
+export { default as ButtonGroup } from "./elements/ButtonGroup";
 
 // Layouts
 export { default as Panel } from "./layouts/Panel";

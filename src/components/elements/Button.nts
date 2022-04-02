@@ -1,12 +1,20 @@
-import { ButtonProps } from "../../types";
+interface ButtonProps {
+  children: string;
+  type?: string;
+  class?: string;
+}
 
 export default function Button(props: ButtonProps) {
+  const { type = "button", class: klass, children } = props;
+
   return (
     <button
-      type="button"
-      class={`inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500`}
+      type={type}
+      class={"inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500".concat(
+        klass ? ` ${klass}` : ""
+      )}
     >
-      Button text
+      {children}
     </button>
   );
 }
