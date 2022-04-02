@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  scroll-behavior: smooth;
+  scroll-margin: 20px;
+}
+
 .rounded-none {
   border-radius: 0px !important;
 }

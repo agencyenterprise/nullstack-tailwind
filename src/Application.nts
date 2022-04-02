@@ -31,14 +31,15 @@ class Application extends Nullstack {
 
   prepare({ page }: ApplicationClientContext) {
     page.locale = "en-US";
+    page.title = "NullStack Tailwind";
   }
 
   render() {
     return (
       <Container>
-        <div class="max-w-4xl  mx-auto">
-          <Panel>
-            <h1 class="text-2xl font-semibold text-gray-900">Elements</h1>
+        <div class="max-w-6xl mx-auto flex flex-col space-y-5">
+          <Panel id="elements" class="w-full">
+            <h2 class="text-2xl font-semibold text-gray-900">Elements</h2>
             <div class="mt-4">
               <Button>Example</Button>
             </div>
@@ -87,8 +88,8 @@ class Application extends Nullstack {
               </div>
             </div>
           </Panel>
-          <Panel class="mt-4">
-            <h1 class="text-2xl font-semibold text-gray-900">Forms</h1>
+          <Panel id="forms" class="w-full">
+            <h2 class="text-2xl font-semibold text-gray-900">Forms</h2>
             <div class="mt-4">
               <Toggle bind={this.user.active} />
             </div>
@@ -129,8 +130,8 @@ class Application extends Nullstack {
               />
             </div>
           </Panel>
-          <Panel class="mt-4">
-            <h1 class="text-2xl font-semibold text-gray-900">Lists</h1>
+          <Panel id="lists" class="w-full">
+            <h2 class="text-2xl font-semibold text-gray-900">Lists</h2>
             <div class="mt-4">
               <Table>
                 <Table.THead>
@@ -186,8 +187,8 @@ class Application extends Nullstack {
               </Table>
             </div>
           </Panel>
-          <Panel class="mt-4">
-            <h1 class="text-2xl font-semibold text-gray-900">Feedbacks</h1>
+          <Panel id="feedbacks" class="w-full">
+            <h2 class="text-2xl font-semibold text-gray-900">Feedbacks</h2>
             <div class="mt-4">
               <Alert class="flex-1 md:flex md:justify-between">
                 <h3 class="text-sm font-medium text-blue-800">Info</h3>
@@ -239,8 +240,8 @@ class Application extends Nullstack {
               </Alert>
             </div>
           </Panel>
-          <Panel class="mt-4">
-            <h1 class="text-2xl font-semibold text-gray-900">Overlays</h1>
+          <Panel id="overlays" class="w-full">
+            <h2 class="text-2xl font-semibold text-gray-900">Overlays</h2>
             <div class="mt-4">
               <Button onclick={() => (this.modalVisible = true)}>
                 Show Modal

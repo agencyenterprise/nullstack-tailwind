@@ -2,14 +2,15 @@ import { classList } from "../../utils";
 
 interface PanelProps {
   children: string;
+  id?: string;
   class?: string;
 }
 
 export default function Panel(props: PanelProps) {
-  const { children, class: klass } = props;
+  const { children, id, class: klass } = props;
 
   return (
-    <div class={classList("max-w-4xl mx-auto", klass)}>
+    <div id={id} class={classList("max-w-4xl mx-auto", klass)}>
       <div class="bg-white overflow-hidden shadow rounded-lg">
         <div class="px-4 py-5 sm:p-6">{children}</div>
       </div>
