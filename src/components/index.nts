@@ -4,6 +4,7 @@ export { default as Badge } from "./elements/Badge";
 export { default as Label } from "./elements/Label";
 export { default as Helper } from "./elements/Helper";
 export { default as ButtonGroup } from "./elements/ButtonGroup";
+export { default as Avatar } from "./elements/Avatar";
 
 // Layouts
 export { default as Panel } from "./layouts/Panel";
