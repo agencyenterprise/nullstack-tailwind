@@ -3,16 +3,15 @@ import { classList } from "../../utils";
 interface BadgeProps {
   children: string;
   class?: string;
-  color?: string;
 }
 
 export default function Badge(props: BadgeProps) {
-  const { color = "blue", class: klass, children } = props;
+  const { class: klass, children } = props;
 
   return (
     <span
       class={classList(
-        `inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium bg-${color}-100 text-${color}-800`,
+        `inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium`,
         klass
       )}
     >

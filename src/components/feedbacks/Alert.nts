@@ -12,7 +12,7 @@ export default function Alert(props: AlertProps) {
 
   const variants = {
     info: {
-      color: "blue",
+      color: "bg-blue-50",
       icon: (
         <svg
           class="h-5 w-5 text-blue-400"
@@ -30,7 +30,7 @@ export default function Alert(props: AlertProps) {
       ),
     },
     success: {
-      color: "green",
+      color: "bg-green-50",
       icon: (
         <svg
           class="h-5 w-5 text-green-400"
@@ -48,7 +48,7 @@ export default function Alert(props: AlertProps) {
       ),
     },
     warning: {
-      color: "yellow",
+      color: "bg-yellow-50",
       icon: (
         <svg
           class="h-5 w-5 text-yellow-400"
@@ -66,7 +66,7 @@ export default function Alert(props: AlertProps) {
       ),
     },
     danger: {
-      color: "red",
+      color: "bg-red-50",
       icon: (
         <svg
           class="h-5 w-5 text-red-400"
@@ -88,7 +88,7 @@ export default function Alert(props: AlertProps) {
   const currentVariant = variants[variant];
 
   return (
-    <div class={`rounded-md bg-${currentVariant.color}-50 p-4`}>
+    <div class={`rounded-md bg-blue-50 ${currentVariant.color} p-4`}>
       <div class="flex">
         <div class="flex-shrink-0">{icon || currentVariant.icon}</div>
         <div class={classList("ml-3 ", klass)}>{children}</div>

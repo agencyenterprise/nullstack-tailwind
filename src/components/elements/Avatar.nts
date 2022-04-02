@@ -5,17 +5,16 @@ interface AvatarProps {
   placeholder?: string;
   alt?: string;
   class?: string;
-  size?: number;
 }
 
 export default function Avatar(props: AvatarProps) {
-  const { src, alt, class: klass, placeholder, size = 10 } = props;
+  const { src, alt, class: klass, placeholder } = props;
 
   if (placeholder) {
     return (
       <span
         class={classList(
-          `inline-flex items-center justify-center h-${size} w-${size} rounded-full bg-gray-500`,
+          `inline-flex items-center justify-center rounded-full bg-gray-500`,
           klass
         )}
       >
@@ -26,7 +25,7 @@ export default function Avatar(props: AvatarProps) {
 
   return (
     <img
-      class={`inline-block h-${size} w-${size} rounded-full`}
+      class={classList(`inline-block rounded-full`, klass)}
       src={src}
       alt={alt}
     />
