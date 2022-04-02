@@ -1,0 +1,32 @@
+interface SelectProps {
+  name: string;
+  source: string;
+  options: string[];
+  children: string;
+  label?: string;
+  helper?: string;
+  disabled?: boolean;
+}
+
+export default function Select(props: SelectProps) {
+  const { label, name, source, children, helper, disabled } = props;
+  const id = `${name}-select`;
+
+  return (
+    <div>
+      <label for={id} class="block text-sm font-medium text-gray-700">
+        {label}
+      </label>
+      <select
+        id={id}
+        name={name}
+        class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md"
+        bind={source[name]}
+        disabled={disabled}
+      >
+        {children}
+      </select>
+      {helper && <p class="mt-2 text-sm text-gray-500">{helper}</p>}
+    </div>
+  );
+}

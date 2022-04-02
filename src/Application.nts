@@ -1,23 +1,68 @@
-import Nullstack from 'nullstack';
-import TodoCounter from './TodoCounter';
-import TodoList from './TodoList';
-import { ApplicationClientContext } from './types';
+import Nullstack from "nullstack";
+import { ApplicationClientContext } from "./types";
+import Container from "./layouts/Container.nts";
+import Button from "./components/elements/Button";
+import Badge from "./components/elements/Badge";
+import Toggle from "./components/forms/Toggle";
+import Input from "./components/forms/Input";
+import Select from "./components/forms/Select";
+import Panel from "./components/layouts/Panel";
+
+import "./styles.css";
 
 class Application extends Nullstack {
+  user = {
+    email: "",
+    active: false,
+    country: "BR",
+  };
 
   prepare({ page }: ApplicationClientContext) {
-    page.locale = 'pt-BR';
+    page.locale = "en-US";
   }
 
   render() {
     return (
-      <main>
-        <TodoList />
-        <TodoCounter />
-      </main>
-    )
+      <Container>
+        <div class="max-w-4xl  mx-auto">
+          <Panel>
+            <h1 class="text-2xl font-semibold text-gray-900">Components</h1>
+            <div class="mt-4">
+              <Button>Example</Button>
+            </div>
+            <div class="mt-4">
+              <Badge>Example</Badge>
+            </div>
+            <h2 class="text-1xl font-semibold text-gray-900 mt-4">Forms</h2>
+            <div class="mt-4">
+              <Toggle bind={this.user.active} />
+            </div>
+            <div class="mt-4">
+              <Input
+                label="Email"
+                type="email"
+                bind={this.user.email}
+                error=""
+                placeholder="foo@bar.com"
+                helper="Example description"
+              />
+            </div>
+            <div class="mt-4">
+              <Select
+                label="Location"
+                bind={this.user.country}
+                helper="Example description"
+                disabled={false}
+              >
+                <option value="US">United States</option>
+                <option value="BR">Brazil</option>
+              </Select>
+            </div>
+          </Panel>
+        </div>
+      </Container>
+    );
   }
-
 }
 
 export default Application;

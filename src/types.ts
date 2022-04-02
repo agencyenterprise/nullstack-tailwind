@@ -1,10 +1,8 @@
 import { NullstackClientContext } from "nullstack/types";
 
-export interface Todo {
-  description: string
-  complete: boolean
+export interface ButtonProps {
+  class?: string;
+  onClick?: (ctx: NullstackClientContext) => void;
 }
 
-export interface ApplicationClientContext extends NullstackClientContext {
-  todos?: Todo[]
-}
+export interface ApplicationClientContext extends NullstackClientContext {}
