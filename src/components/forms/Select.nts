@@ -1,3 +1,6 @@
+import Label from "../elements/Label";
+import Helper from "../elements/Helper";
+
 interface SelectProps {
   name: string;
   source: string;
@@ -14,9 +17,7 @@ export default function Select(props: SelectProps) {
 
   return (
     <div>
-      <label for={id} class="block text-sm font-medium text-gray-700">
-        {label}
-      </label>
+      <Label for={id}>{label}</Label>
       <select
         id={id}
         name={name}
@@ -26,7 +27,7 @@ export default function Select(props: SelectProps) {
       >
         {children}
       </select>
-      {helper && <p class="mt-2 text-sm text-gray-500">{helper}</p>}
+      {helper && <Helper>{helper}</Helper>}
     </div>
   );
 }

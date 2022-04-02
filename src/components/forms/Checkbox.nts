@@ -1,4 +1,6 @@
 import Nullstack from "nullstack";
+import Label from "../elements/Label";
+import Helper from "../elements/Helper";
 
 interface CheckboxProps {
   name: string;
@@ -45,14 +47,8 @@ class Checkbox extends Nullstack {
           />
         </div>
         <div class="ml-3 text-sm">
-          <label for="comments" class="font-medium text-gray-700">
-            {label}
-          </label>
-          {description && (
-            <p id={id} class="text-gray-500">
-              {description}
-            </p>
-          )}
+          <Label for={id}>{label}</Label>
+          {description && <Helper>{description}</Helper>}
         </div>
       </div>
     );

@@ -1,0 +1,20 @@
+interface LabelProps {
+  for?: string;
+  class?: string;
+  children: string;
+}
+
+export default function Label(props: LabelProps) {
+  const { for: receivedFor, class: klass, children } = props;
+
+  return (
+    <label
+      for={receivedFor}
+      class={"block text-sm font-medium text-gray-700".concat(
+        klass ? ` ${klass}` : ""
+      )}
+    >
+      {children}
+    </label>
+  );
+}

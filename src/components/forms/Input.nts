@@ -1,3 +1,6 @@
+import Label from "../elements/Label";
+import Helper from "../elements/Helper";
+
 interface InputProps {
   name: string;
   source: string;
@@ -14,9 +17,7 @@ export default function Input(props: InputProps) {
 
   return (
     <div>
-      <label for="email" class="block text-sm font-medium text-gray-700">
-        {label}
-      </label>
+      <Label for={id}>{label}</Label>
       <div class="mt-1 relative rounded-md shadow-sm">
         <input
           type={type}
@@ -53,7 +54,7 @@ export default function Input(props: InputProps) {
       {error ? (
         <p class="mt-2 text-sm text-red-600">{error}</p>
       ) : (
-        helper && <p class="mt-2 text-sm text-gray-500">{helper}</p>
+        helper && <Helper>{helper}</Helper>
       )}
     </div>
   );

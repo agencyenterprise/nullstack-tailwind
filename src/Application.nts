@@ -6,6 +6,7 @@ import {
   Badge,
   Toggle,
   Input,
+  Textarea,
   Select,
   Panel,
   Table,
@@ -17,6 +18,7 @@ import "./styles.css";
 class Application extends Nullstack {
   user = {
     email: "",
+    about: "Something about me...",
     active: false,
     country: "BR",
     allowNotification: true,
@@ -49,6 +51,13 @@ class Application extends Nullstack {
                 bind={this.user.email}
                 error=""
                 placeholder="foo@bar.com"
+                helper="Example description"
+              />
+            </div>
+            <div class="mt-4">
+              <Textarea
+                label="About"
+                bind={this.user.about}
                 helper="Example description"
               />
             </div>

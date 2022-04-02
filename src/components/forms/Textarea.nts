@@ -1,0 +1,35 @@
+import Label from "../elements/Label";
+import Helper from "../elements/Helper";
+
+interface TextareaProps {
+  name: string;
+  source: string;
+  rows?: number;
+  label?: string;
+  helper?: string;
+  disabled?: boolean;
+}
+
+export default function Textarea(props: TextareaProps) {
+  const { label, name, rows = 4, source, helper, disabled = false } = props;
+  const id = `${name}-textarea`;
+  const value = source[name];
+
+  return (
+    <div>
+      <Label for={id}>{label}</Label>
+      <div class="mt-1">
+        <textarea
+          rows={rows}
+          id={id}
+          class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md"
+          disabled={disabled}
+          bind={source[name]}
+        >
+          {value}
+        </textarea>
+      </div>
+      {helper && <Helper>{helper}</Helper>}
+    </div>
+  );
+}

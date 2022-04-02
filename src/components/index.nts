@@ -1,6 +1,8 @@
 // Elements
 export { default as Button } from "./elements/Button";
 export { default as Badge } from "./elements/Badge";
+export { default as Label } from "./elements/Label";
+export { default as Helper } from "./elements/Helper";
 
 // Layouts
 export { default as Panel } from "./layouts/Panel";
@@ -11,5 +13,6 @@ export { default as Table } from "./lists/Table";
 // Forms
 export { default as Toggle } from "./forms/Toggle";
 export { default as Input } from "./forms/Input";
+export { default as Textarea } from "./forms/Textarea";
 export { default as Select } from "./forms/Select";
 export { default as Checkbox } from "./forms/Checkbox";
