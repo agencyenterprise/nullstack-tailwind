@@ -12,6 +12,7 @@ toc:
     children:
       - Checkbox
       - Input
+      - Radio
       - Select
       - Textarea
       - Toggle

@@ -2,18 +2,19 @@ import Nullstack from "nullstack";
 import { ApplicationClientContext } from "./types";
 import Container from "./layouts/Container.nts";
 import {
+  Avatar,
+  Badge,
   Button,
   ButtonGroup,
-  Badge,
-  Toggle,
-  Input,
-  Textarea,
-  Select,
-  Panel,
-  Table,
   Checkbox,
-  Avatar,
+  Input,
   Modal,
+  Panel,
+  Radio,
+  Select,
+  Table,
+  Textarea,
+  Toggle,
 } from "./components";
 
 import "./styles.css";
@@ -26,7 +27,6 @@ class Application extends Nullstack {
     about: "Something about me...",
     active: false,
     country: "BR",
-    allowNotification: true,
   };
 
   prepare({ page }: ApplicationClientContext) {
@@ -101,12 +101,20 @@ class Application extends Nullstack {
               <Toggle bind={this.user.active} />
             </div>
             <div class="mt-4">
+              <h3 class="text-1xl font-semibold text-gray-600 mb-2">Radio</h3>
+              <Radio
+                label="Email"
+                helper="4 GB RAM / 2 CPUS / 80 GB SSD Storage"
+                bind={this.user.active}
+              />
+            </div>
+            <div class="mt-4">
               <h3 class="text-1xl font-semibold text-gray-600 mb-2">Input</h3>
               <Input
                 label="Email"
                 type="email"
                 bind={this.user.email}
-                error="dassda"
+                error="Invalid email"
                 placeholder="foo@bar.com"
                 helper="Example description"
                 corner="Optional"
@@ -141,7 +149,7 @@ class Application extends Nullstack {
               <Checkbox
                 label="Comments"
                 description="Get notified when someones posts a comment on a posting."
-                bind={this.user.allowNotification}
+                bind={this.user.active}
               />
             </div>
           </Panel>

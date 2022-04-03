@@ -18,6 +18,7 @@ export { default as Input } from "./forms/Input.nts";
 export { default as Textarea } from "./forms/Textarea.nts";
 export { default as Select } from "./forms/Select.nts";
 export { default as Checkbox } from "./forms/Checkbox.nts";
+export { default as Radio } from "./forms/Radio.nts";
 
 // Feedbacks
 export { default as Alert } from "./feedbacks/Alert.nts";
