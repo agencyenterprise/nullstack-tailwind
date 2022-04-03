@@ -16,7 +16,16 @@ interface AlertProps {
  * @param {?string} id
  * @param {!Element} children
  * @returns {Element}
- * @example <Alert variant="success" icon={<Icon name="check" />}>Something here...</Alert>
+ * @example
+ * <Alert variant="success" icon={<Icon name="check" />}>
+ *  <h3 class="text-sm font-medium text-green-800">Success</h3>
+ *  <div class="mt-2 text-sm text-green-700">
+ *    <p>
+ *      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+ *      Aliquid pariatur, ipsum similique veniam.
+ *    </p>
+ *  </div>
+ * </Alert>
  */
 export default function Alert(props: AlertProps) {
   const { variant = "info", icon, children, id, class: klass } = props;
