@@ -2,8 +2,8 @@ import { classList } from "../../utils";
 
 interface PanelProps {
   children: string;
-  id?: string;
   class?: string;
+  id?: string;
 }
 
 /**

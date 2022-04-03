@@ -1,8 +1,8 @@
 import { classList } from "../../utils";
 
 interface ModalProps {
-  visible: boolean;
   children: string;
+  visible: boolean;
 }
 
 const Modal = (props: ModalProps) => {

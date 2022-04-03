@@ -1,13 +1,15 @@
 import { classList } from "../../utils";
 
 interface ButtonGroupProps {
-  class?: string;
   children: string;
+  class?: string;
+  id?: string;
 }
 
 /**
  * @name ButtonGroup
  * @param {!Element} children
+ * @param {?string} id
  * @param {?string} class
  * @returns {Element}
  * @example
@@ -18,10 +20,11 @@ interface ButtonGroupProps {
  * </ButtonGroup>
  */
 export default function ButtonGroup(props: ButtonGroupProps) {
-  const { class: klass, children } = props;
+  const { id, class: klass, children } = props;
 
   return (
     <span
+      id={id}
       class={classList("relative z-0 inline-flex shadow-sm rounded-md", klass)}
     >
       {children}

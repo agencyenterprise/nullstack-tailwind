@@ -1,9 +1,9 @@
 import { classList } from "../../utils";
 
 interface LabelProps {
-  for?: string;
-  class?: string;
   children: string;
+  class?: string;
+  for?: string;
 }
 
 export default function Label(props: LabelProps) {

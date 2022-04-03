@@ -3,14 +3,15 @@ import Helper from "../elements/Helper.nts";
 import { classList } from "../../utils";
 
 interface InputProps {
-  name: string;
-  source: string;
-  id?: string;
-  label?: string;
-  placeholder?: string;
-  helper?: string;
+  class?: string;
   corner?: string;
   error?: string;
+  helper?: string;
+  id?: string;
+  label?: string;
+  name: string;
+  placeholder?: string;
+  source: string;
   type?: string;
 }
 
@@ -37,8 +38,18 @@ interface InputProps {
  * />
  */
 export default function Input(props: InputProps) {
-  const { label, id, type, placeholder, name, source, error, helper, corner } =
-    props;
+  const {
+    label,
+    id,
+    class: klass,
+    type,
+    placeholder,
+    name,
+    source,
+    error,
+    helper,
+    corner,
+  } = props;
 
   return (
     <div>
@@ -56,7 +67,8 @@ export default function Input(props: InputProps) {
           class={classList(
             "shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md focus:outline-none",
             error &&
-              " border-red-300 text-red-900 placeholder-red-300 focus:ring-red-500 focus:border-red-500"
+              " border-red-300 text-red-900 placeholder-red-300 focus:ring-red-500 focus:border-red-500",
+            klass
           )}
           placeholder={placeholder}
           aria-invalid="true"

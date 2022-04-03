@@ -1,8 +1,8 @@
 import { classList } from "../../utils";
 
 interface HelperProps {
-  class?: string;
   children: string;
+  class?: string;
 }
 
 export default function Helper(props: HelperProps) {
