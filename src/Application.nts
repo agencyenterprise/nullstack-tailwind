@@ -170,10 +170,10 @@ class Application extends Nullstack {
                 <Table.TBody>
                   <Table.TR>
                     <Table.TD class="font-medium text-gray-900">
-                      Lindsay Walton
+                      Fabio Coelho
                     </Table.TD>
-                    <Table.TD>Front-end Developer</Table.TD>
-                    <Table.TD>lindsay.walton@example.com</Table.TD>
+                    <Table.TD>Software Engineer</Table.TD>
+                    <Table.TD>fabio@ae.studio</Table.TD>
                     <Table.TD>Member</Table.TD>
                     <Table.TD>
                       <a href="#" class="text-indigo-600 hover:text-indigo-900">
@@ -183,10 +183,10 @@ class Application extends Nullstack {
                   </Table.TR>
                   <Table.TR>
                     <Table.TD class="font-medium text-gray-900">
-                      Lindsay Walton
+                      Fabio Coelho
                     </Table.TD>
-                    <Table.TD>Front-end Developer</Table.TD>
-                    <Table.TD>lindsay.walton@example.com</Table.TD>
+                    <Table.TD>Software Engineer</Table.TD>
+                    <Table.TD>fabio@ae.studio</Table.TD>
                     <Table.TD>Member</Table.TD>
                     <Table.TD>
                       <a href="#" class="text-indigo-600 hover:text-indigo-900">
@@ -196,10 +196,10 @@ class Application extends Nullstack {
                   </Table.TR>
                   <Table.TR>
                     <Table.TD class="font-medium text-gray-900">
-                      Lindsay Walton
+                      Fabio Coelho
                     </Table.TD>
-                    <Table.TD>Front-end Developer</Table.TD>
-                    <Table.TD>lindsay.walton@example.com</Table.TD>
+                    <Table.TD>Software Engineer</Table.TD>
+                    <Table.TD>fabio@ae.studio</Table.TD>
                     <Table.TD>Member</Table.TD>
                     <Table.TD>
                       <a href="#" class="text-indigo-600 hover:text-indigo-900">
