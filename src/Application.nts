@@ -16,6 +16,7 @@ import {
   Textarea,
   Toggle,
   Alert,
+  DatePicker,
 } from "nullstack-tailwind";
 
 import "./styles.css";
@@ -27,6 +28,8 @@ class Application extends Nullstack {
     about: "Something about me...",
     active: false,
     country: "BR",
+    date: "2023-09-07",
+    dateRange: "2023-09-07 to 2023-09-09",
   };
 
   prepare({ page }: ApplicationClientContext) {
@@ -151,6 +154,24 @@ class Application extends Nullstack {
                 description="Get notified when someones posts a comment on a posting."
                 bind={this.user.active}
               />
+            </div>
+            <div class="mt-4">
+              <h3 class="text-1xl font-semibold text-gray-600 mb-2">
+                DatePicker
+              </h3>
+              <div class="grid grid-cols-4 gap-4">
+                <DatePicker
+                  label="Date"
+                  helper="Normal date field"
+                  bind={this.user.date}
+                />
+                <DatePicker
+                  label="Range Date"
+                  helper="Range date field"
+                  config={{ mode: "range" }}
+                  bind={this.user.dateRange}
+                />
+              </div>
             </div>
           </Panel>
           <Panel id="lists">

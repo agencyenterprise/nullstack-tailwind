@@ -11,6 +11,7 @@ toc:
   - name: Forms
     children:
       - Checkbox
+      - DatePicker
       - Input
       - Radio
       - Select
@@ -22,6 +23,3 @@ toc:
   - name: Lists
     children:
       - Table
-  - name: Overlays
-    children:
-      - Modal

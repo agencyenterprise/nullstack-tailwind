@@ -19,6 +19,7 @@ export { default as Textarea } from "./forms/Textarea.nts";
 export { default as Select } from "./forms/Select.nts";
 export { default as Checkbox } from "./forms/Checkbox.nts";
 export { default as Radio } from "./forms/Radio.nts";
+export { default as DatePicker } from "./forms/DatePicker.nts";
 
 // Feedbacks
 export { default as Alert } from "./feedbacks/Alert.nts";

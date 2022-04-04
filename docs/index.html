@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset='utf-8'>
-  <title>nullstack-tailwind 0.0.1 | Documentation</title>
+  <title>nullstack-tailwind 0.1.0 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' rel='stylesheet'>
   <link href='assets/style.css' rel='stylesheet'>
@@ -14,7 +14,7 @@
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
           <h3 class='mb0 no-anchor'>nullstack-tailwind</h3>
-          <div class='mb1'><code>0.0.1</code></div>
+          <div class='mb1'><code>0.1.0</code></div>
           <input
             placeholder='Filter'
             id='filter-input'
@@ -120,6 +120,12 @@
                       </a></li>
                     
                       <li><a
+                        href='#datepicker'
+                        class='regular pre-open'>
+                        .DatePicker
+                      </a></li>
+                    
+                      <li><a
                         href='#input'
                         class='regular pre-open'>
                         .Input
@@ -214,16 +220,6 @@
                 
                 </li>
               
-                
-                <li><a
-                  href='#overlays'
-                  class="h5 bold black caps">
-                  Overlays
-                  
-                </a>
-                
-                </li>
-              
             </ul>
           </div>
           <div class='mt1 h6 quiet'>
@@ -289,7 +285,7 @@
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/e86d2d21c54f4966c77c9ffd33463c7ae9e62008/src/components/elements/Avatar.nts#L21-L46'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/elements/Avatar.nts#L21-L46'>
       <span>src/components/elements/Avatar.nts</span>
       </a>
     
@@ -404,7 +400,7 @@
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/e86d2d21c54f4966c77c9ffd33463c7ae9e62008/src/components/elements/Badge.nts#L17-L31'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/elements/Badge.nts#L17-L31'>
       <span>src/components/elements/Badge.nts</span>
       </a>
     
@@ -503,7 +499,7 @@
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/e86d2d21c54f4966c77c9ffd33463c7ae9e62008/src/components/elements/Button.nts#L21-L37'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/elements/Button.nts#L21-L37'>
       <span>src/components/elements/Button.nts</span>
       </a>
     
@@ -618,7 +614,7 @@
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/e86d2d21c54f4966c77c9ffd33463c7ae9e62008/src/components/elements/ButtonGroup.nts#L22-L33'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/elements/ButtonGroup.nts#L22-L33'>
       <span>src/components/elements/ButtonGroup.nts</span>
       </a>
     
@@ -776,7 +772,7 @@
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/e86d2d21c54f4966c77c9ffd33463c7ae9e62008/src/components/feedbacks/Alert.nts#L30-L118'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/feedbacks/Alert.nts#L30-L118'>
       <span>src/components/feedbacks/Alert.nts</span>
       </a>
     
@@ -954,7 +950,7 @@
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/e86d2d21c54f4966c77c9ffd33463c7ae9e62008/src/components/forms/Checkbox.nts#L27-L68'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/forms/Checkbox.nts#L27-L68'>
       <span>src/components/forms/Checkbox.nts</span>
       </a>
     
@@ -1047,6 +1043,138 @@
       </div>
     </div>
   
+    <div class='border-bottom' id='datepicker'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>DatePicker</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/forms/DatePicker.nts#L34-L63'>
+      <span>src/components/forms/DatePicker.nts</span>
+      </a>
+    
+  </div>
+  
+
+  
+    <div class='pre p1 fill-light mt0'>DatePicker</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>disabled</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a>?)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>children</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/API/Element">Element</a>?)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>config</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>?)</code>
+	    flatpickr config
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>class</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>helper</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>id</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>label</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>?)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/API/Element">Element</a></code>:
+        
+      
+    
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Example</div>
+    
+      
+      <pre class='p1 overflow-auto round fill-light'>&lt;DatePicker label=<span class="hljs-string">&quot;Comments&quot;</span> config={{ <span class="hljs-attr">mode</span>: <span class="hljs-string">&quot;range&quot;</span> }} bind={<span class="hljs-built_in">this</span>.user.about} /&gt;</pre>
+    
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
     <div class='border-bottom' id='input'>
       <div class="clearfix small pointer toggle-sibling">
         <div class="py1 contain">
@@ -1061,7 +1189,7 @@
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/e86d2d21c54f4966c77c9ffd33463c7ae9e62008/src/components/forms/Input.nts#L40-L104'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/forms/Input.nts#L40-L104'>
       <span>src/components/forms/Input.nts</span>
       </a>
     
@@ -1208,7 +1336,7 @@
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/e86d2d21c54f4966c77c9ffd33463c7ae9e62008/src/components/forms/Radio.nts#L26-L73'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/forms/Radio.nts#L26-L73'>
       <span>src/components/forms/Radio.nts</span>
       </a>
     
@@ -1323,7 +1451,7 @@
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/e86d2d21c54f4966c77c9ffd33463c7ae9e62008/src/components/forms/Select.nts#L32-L62'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/forms/Select.nts#L32-L62'>
       <span>src/components/forms/Select.nts</span>
       </a>
     
@@ -1450,7 +1578,7 @@
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/e86d2d21c54f4966c77c9ffd33463c7ae9e62008/src/components/forms/Textarea.nts#L26-L59'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/forms/Textarea.nts#L26-L59'>
       <span>src/components/forms/Textarea.nts</span>
       </a>
     
@@ -1557,7 +1685,7 @@
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/e86d2d21c54f4966c77c9ffd33463c7ae9e62008/src/components/forms/Toggle.nts#L24-L58'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/forms/Toggle.nts#L24-L58'>
       <span>src/components/forms/Toggle.nts</span>
       </a>
     
@@ -1719,7 +1847,7 @@
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/e86d2d21c54f4966c77c9ffd33463c7ae9e62008/src/components/layouts/Panel.nts#L17-L27'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/layouts/Panel.nts#L17-L27'>
       <span>src/components/layouts/Panel.nts</span>
       </a>
     
@@ -1873,7 +2001,7 @@
   <div class='clearfix'>
     
     
-      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/e86d2d21c54f4966c77c9ffd33463c7ae9e62008/src/components/lists/Table.nts#L35-L44'>
+      <a class='fr fill-darken0 round round pad1x quiet h5' href='https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/lists/Table.nts#L35-L44'>
       <span>src/components/lists/Table.nts</span>
       </a>
     
@@ -1984,55 +2112,6 @@
     </div>
   
 </div>
-
-  
-
-  
-
-  
-
-  
-</section>
-
-          
-        
-          
-          <section class='p2 mb2 clearfix bg-white minishadow'>
-
-  
-  <div class='clearfix'>
-    
-    <h3 class='fl m0' id='overlays'>
-      Overlays
-    </h3>
-    
-    
-  </div>
-  
-
-  
-    <div class='pre p1 fill-light mt0'>Overlays</div>
-  
-  
-
-  
-  
-  
-  
-  
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
 
   
 
