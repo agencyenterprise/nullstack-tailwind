@@ -11,7 +11,7 @@ const Modal = (props: ModalProps) => {
   return (
     <div
       class={classList(
-        "fixed z-10 inset-0 overflow-y-auto",
+        "modal-transition fixed z-10 inset-0 overflow-y-auto",
         visible ? "block" : "hidden"
       )}
       aria-labelledby="modal-title"

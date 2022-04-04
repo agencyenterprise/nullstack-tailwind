@@ -639,6 +639,11 @@ select {
   --tw-backdrop-sepia:  ;
 }
 
+.modal-transition {
+  -webkit-animation: modal-transition 100ms ease-out;
+          animation: modal-transition 100ms ease-out;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
@@ -704,13 +709,12 @@ select {
   margin-right: auto;
 }
 
-.my-2 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
 .mt-4 {
   margin-top: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 
 .ml-3 {
@@ -735,10 +739,6 @@ select {
 
 .mt-1 {
   margin-top: 0.25rem;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem;
 }
 
 .block {
@@ -793,10 +793,6 @@ select {
   min-height: 100vh;
 }
 
-.w-full {
-  width: 100%;
-}
-
 .w-10 {
   width: 2.5rem;
 }
@@ -815,6 +811,10 @@ select {
 
 .w-4 {
   width: 1rem;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .w-11 {
@@ -1205,11 +1205,6 @@ select {
   line-height: 1.5rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-}
-
 .font-semibold {
   font-weight: 600;
 }
@@ -1229,6 +1224,11 @@ select {
 .text-gray-900 {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
 .text-gray-700 {
@@ -1296,9 +1296,9 @@ select {
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
-.text-gray-600 {
+.text-gray-800 {
   --tw-text-opacity: 1;
-  color: rgb(75 85 99 / var(--tw-text-opacity));
+  color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
 .text-white {
@@ -1339,16 +1339,6 @@ select {
 .text-red-600 {
   --tw-text-opacity: 1;
   color: rgb(220 38 38 / var(--tw-text-opacity));
-}
-
-.text-gray-300 {
-  --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity));
-}
-
-.text-gray-800 {
-  --tw-text-opacity: 1;
-  color: rgb(31 41 55 / var(--tw-text-opacity));
 }
 
 .placeholder-red-300::-moz-placeholder {
@@ -1437,6 +1427,26 @@ select {
 
 .rounded-none {
   border-radius: 0px !important;
+}
+
+@-webkit-keyframes modal-transition {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modal-transition {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 .hover\:bg-gray-50:hover {

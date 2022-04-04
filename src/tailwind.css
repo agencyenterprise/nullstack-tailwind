@@ -10,3 +10,18 @@
 .rounded-none {
   border-radius: 0px !important;
 }
+
+@layer components {
+  .modal-transition {
+    animation: modal-transition 100ms ease-out;
+  }
+}
+
+@keyframes modal-transition {
+  from {
+    @apply opacity-0;
+  }
+  to {
+    @apply opacity-100;
+  }
+}
