@@ -31,6 +31,13 @@ export default function Container(props) {
           <div class="mt-5 flex-grow flex flex-col">
             <nav class="flex-1 px-2 pb-4 space-y-1">
               <a
+                href="https://fccoelho7.github.io/nullstack-tailwind/"
+                class="text-gray-800 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
+              >
+                <Icon />
+                Docs
+              </a>
+              <a
                 href="#elements"
                 class="text-gray-600 hover:bg-gray-50 hover:text-gray-900 group flex items-center px-2 py-2 text-sm font-medium rounded-md"
               >
