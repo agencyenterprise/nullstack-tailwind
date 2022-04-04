@@ -21,6 +21,7 @@
     "start": "concurrently \"npm run start-tailwind\" \"npm run start-nullstack\"",
     "doc:md": "npx documentation readme --config documentation.yml ./src/components --parse-extension nts -f md --github --section=API",
     "doc:html": "npx documentation build --config documentation.yml ./src/components --parse-extension nts -f html --github -o docs",
-    "doc": "concurrently \"npm run doc:md\" \"npm run doc:html\""
+    "doc": "concurrently \"npm run doc:md\" \"npm run doc:html\"",
+    "vercel-build": "npm run build-nullstack"
   }
 }
