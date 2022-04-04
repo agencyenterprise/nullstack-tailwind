@@ -15,10 +15,10 @@ import {
   Table,
   Textarea,
   Toggle,
-} from "./components";
+  Alert,
+} from "nullstack-tailwind";
 
 import "./styles.css";
-import Alert from "./components/feedbacks/Alert.nts";
 
 class Application extends Nullstack {
   modalVisible = false;

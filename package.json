@@ -1,9 +1,10 @@
 {
   "name": "nullstack-tailwind",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "",
   "author": "",
   "license": "ISC",
+  "main": "./src/components/index.nts",
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.0",
     "autoprefixer": "^10.4.4",
