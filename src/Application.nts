@@ -2,11 +2,13 @@ import Nullstack from "nullstack";
 import { ApplicationClientContext } from "./types";
 import Container from "./layouts/Container.nts";
 import {
+  Alert,
   Avatar,
   Badge,
   Button,
   ButtonGroup,
   Checkbox,
+  DatePicker,
   Input,
   Modal,
   Panel,
@@ -15,9 +17,7 @@ import {
   Table,
   Textarea,
   Toggle,
-  Alert,
-  DatePicker,
-} from "nullstack-tailwind";
+} from "./components/index.nts";
 
 import "./styles.css";
 
