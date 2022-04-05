@@ -1,6 +1,56 @@
 # Nullstack Tailwind
 
-## How to run this Project
+## Setup
+
+First, install the packages.
+
+```bash
+yarn add tailwindcss @tailwindcss/forms -D
+yarn add nullstack-tailwind
+```
+
+### Tailwind Config File
+
+Configure the tailwind config to watch nullstack-tailwind components.
+
+```js
+// tailwind.config.js
+module.exports = {
+  content: ["./node_modules/nullstack-tailwind/src/components/**/*.nts"],
+  plugins: [require("@tailwindcss/forms")],
+};
+```
+
+### Tailwind CSS File
+
+Create a tailwind.css file with the configuration below.
+
+```css
+/* tailwind.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+### Import the generated CSS file
+
+```js
+// Application.nts
+import "./styles.css";
+```
+
+### Script Examples
+
+```json
+{
+  "scripts": {
+    "start-tailwind": "npx tailwindcss -i ./src/tailwind.css -o ./src/styles.css --watch",
+    "build-tailwind": "npx tailwindcss -i ./src/tailwind.css -o ./src/styles.css"
+  }
+}
+```
+
+## Running
 
 Install the dependencies:
 
@@ -9,7 +59,7 @@ Install the dependencies:
 Copy the environment sample to a .env file
 
 ```sh
-NULLSTACK_PROJECT_NAME="[dev] Nullstack Simple Todo"
+NULLSTACK_PROJECT_NAME="[dev] Nullstack Tailwind"
 NULLSTACK_PROJECT_DOMAIN="localhost"
 NULLSTACK_PROJECT_COLOR="#D22365"
 NULLSTACK_SERVER_PORT="3000"
@@ -27,57 +77,55 @@ Open <http://localhost:3000> to view it in the browser.
 
 #### Table of Contents
 
-*   [Elements](#elements)
-    *   [Avatar](#avatar)
-        *   [Parameters](#parameters)
-        *   [Examples](#examples)
-    *   [Badge](#badge)
-        *   [Parameters](#parameters-1)
-        *   [Examples](#examples-1)
-    *   [Button](#button)
-        *   [Parameters](#parameters-2)
-        *   [Examples](#examples-2)
-    *   [ButtonGroup](#buttongroup)
-        *   [Parameters](#parameters-3)
-        *   [Examples](#examples-3)
-*   [Feedbacks](#feedbacks)
-    *   [Alert](#alert)
-        *   [Parameters](#parameters-4)
-        *   [Examples](#examples-4)
-*   [Forms](#forms)
-    *   [Checkbox](#checkbox)
-        *   [Parameters](#parameters-5)
-        *   [Examples](#examples-5)
-    *   [DatePicker](#datepicker)
-        *   [Parameters](#parameters-6)
-        *   [Examples](#examples-6)
-    *   [Input](#input)
-        *   [Parameters](#parameters-7)
-        *   [Examples](#examples-7)
-    *   [Radio](#radio)
-        *   [Parameters](#parameters-8)
-        *   [Examples](#examples-8)
-    *   [Select](#select)
-        *   [Parameters](#parameters-9)
-        *   [Examples](#examples-9)
-    *   [Textarea](#textarea)
-        *   [Parameters](#parameters-10)
-        *   [Examples](#examples-10)
-    *   [Toggle](#toggle)
-        *   [Parameters](#parameters-11)
-        *   [Examples](#examples-11)
-*   [Layouts](#layouts)
-    *   [Panel](#panel)
-        *   [Parameters](#parameters-12)
-        *   [Examples](#examples-12)
-*   [Lists](#lists)
-    *   [Table](#table)
-        *   [Parameters](#parameters-13)
-        *   [Examples](#examples-13)
+- [Elements](#elements)
+  - [Avatar](#avatar)
+    - [Parameters](#parameters)
+    - [Examples](#examples)
+  - [Badge](#badge)
+    - [Parameters](#parameters-1)
+    - [Examples](#examples-1)
+  - [Button](#button)
+    - [Parameters](#parameters-2)
+    - [Examples](#examples-2)
+  - [ButtonGroup](#buttongroup)
+    - [Parameters](#parameters-3)
+    - [Examples](#examples-3)
+- [Feedbacks](#feedbacks)
+  - [Alert](#alert)
+    - [Parameters](#parameters-4)
+    - [Examples](#examples-4)
+- [Forms](#forms)
+  - [Checkbox](#checkbox)
+    - [Parameters](#parameters-5)
+    - [Examples](#examples-5)
+  - [DatePicker](#datepicker)
+    - [Parameters](#parameters-6)
+    - [Examples](#examples-6)
+  - [Input](#input)
+    - [Parameters](#parameters-7)
+    - [Examples](#examples-7)
+  - [Radio](#radio)
+    - [Parameters](#parameters-8)
+    - [Examples](#examples-8)
+  - [Select](#select)
+    - [Parameters](#parameters-9)
+    - [Examples](#examples-9)
+  - [Textarea](#textarea)
+    - [Parameters](#parameters-10)
+    - [Examples](#examples-10)
+  - [Toggle](#toggle)
+    - [Parameters](#parameters-11)
+    - [Examples](#examples-11)
+- [Layouts](#layouts)
+  - [Panel](#panel)
+    - [Parameters](#parameters-12)
+    - [Examples](#examples-12)
+- [Lists](#lists)
+  - [Table](#table)
+    - [Parameters](#parameters-13)
+    - [Examples](#examples-13)
 
 ### Elements
-
-
 
 #### Avatar
 
@@ -85,19 +133,23 @@ Open <http://localhost:3000> to view it in the browser.
 
 ##### Parameters
 
-*   `src` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `alt` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `placeholder` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+- `src` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `alt` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `placeholder` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
 
 ##### Examples
 
 ```javascript
-<Avatar class="h-10 w-10" src="https://avatars0.githubusercontent.com/u/1234?s=460&v=4" alt="Avatar" />
+<Avatar
+  class="h-10 w-10"
+  src="https://avatars0.githubusercontent.com/u/1234?s=460&v=4"
+  alt="Avatar"
+/>
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 #### Badge
 
@@ -105,9 +157,9 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 ##### Parameters
 
-*   `children` **\![Element](https://developer.mozilla.org/docs/Web/API/Element)** 
-*   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+- `children` **\![Element](https://developer.mozilla.org/docs/Web/API/Element)**
+- `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
 
 ##### Examples
 
@@ -115,7 +167,7 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 <Badge>Example</Badge>
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 #### Button
 
@@ -123,11 +175,11 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 ##### Parameters
 
-*   `children` **\![Element](https://developer.mozilla.org/docs/Web/API/Element)** 
-*   `onclick` **[function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)?** 
-*   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `type` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+- `children` **\![Element](https://developer.mozilla.org/docs/Web/API/Element)**
+- `onclick` **[function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)?**
+- `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `type` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
 
 ##### Examples
 
@@ -135,7 +187,7 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 <Button onclick={() => alert("Hello")}>Hello</Button>
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 #### ButtonGroup
 
@@ -143,25 +195,23 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 ##### Parameters
 
-*   `children` **\![Element](https://developer.mozilla.org/docs/Web/API/Element)** 
-*   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+- `children` **\![Element](https://developer.mozilla.org/docs/Web/API/Element)**
+- `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
 
 ##### Examples
 
 ```javascript
 <ButtonGroup>
- <Button class="rounded-r-none">Years</Button>
- <Button class="rounded-none">Months</Button>
- <Button class="rounded-l-none">Days</Button>
+  <Button class="rounded-r-none">Years</Button>
+  <Button class="rounded-none">Months</Button>
+  <Button class="rounded-l-none">Days</Button>
 </ButtonGroup>
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 ### Feedbacks
-
-
 
 #### Alert
 
@@ -169,31 +219,29 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 ##### Parameters
 
-*   `variant` **(`"success"` | `"info"` | `"warning"` | `"danger"`)?** 
-*   `icon` **[SVGElement](https://developer.mozilla.org/docs/Web/SVG/Element/animate)?** 
-*   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `children` **\![Element](https://developer.mozilla.org/docs/Web/API/Element)** 
+- `variant` **(`"success"` | `"info"` | `"warning"` | `"danger"`)?**
+- `icon` **[SVGElement](https://developer.mozilla.org/docs/Web/SVG/Element/animate)?**
+- `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `children` **\![Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 ##### Examples
 
 ```javascript
 <Alert variant="success" icon={<Icon name="check" />}>
- <h3 class="text-sm font-medium text-green-800">Success</h3>
- <div class="mt-2 text-sm text-green-700">
-   <p>
-     Lorem ipsum dolor sit amet consectetur adipisicing elit.
-     Aliquid pariatur, ipsum similique veniam.
-   </p>
- </div>
+  <h3 class="text-sm font-medium text-green-800">Success</h3>
+  <div class="mt-2 text-sm text-green-700">
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur,
+      ipsum similique veniam.
+    </p>
+  </div>
 </Alert>
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 ### Forms
-
-
 
 #### Checkbox
 
@@ -201,18 +249,22 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 ##### Parameters
 
-*   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `description` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** 
-*   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+- `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `description` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?**
+- `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
 
 ##### Examples
 
 ```javascript
-<Checkbox label="Comments" description="Get notified when someones posts a comment on a posting." bind={this.user.allowNotification} />
+<Checkbox
+  label="Comments"
+  description="Get notified when someones posts a comment on a posting."
+  bind={this.user.allowNotification}
+/>
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 #### DatePicker
 
@@ -220,21 +272,25 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 ##### Parameters
 
-*   `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** 
-*   `children` **[Element](https://developer.mozilla.org/docs/Web/API/Element)?** 
-*   `config` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** flatpickr config
-*   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `helper` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `label` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+- `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?**
+- `children` **[Element](https://developer.mozilla.org/docs/Web/API/Element)?**
+- `config` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** flatpickr config
+- `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `helper` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `label` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
 
 ##### Examples
 
 ```javascript
-<DatePicker label="Comments" config={{ mode: "range" }} bind={this.user.about} />
+<DatePicker
+  label="Comments"
+  config={{ mode: "range" }}
+  bind={this.user.about}
+/>
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 #### Input
 
@@ -242,30 +298,30 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 ##### Parameters
 
-*   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `placeholder` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `helper` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `corner` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `error` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `type` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** 
+- `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `placeholder` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `helper` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `corner` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `error` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `type` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?**
 
 ##### Examples
 
 ```javascript
 <Input
- label="Email"
- type="email"
- bind={this.user.email}
- error="Invalid e-mail"
- placeholder="foo@bar.com"
- helper="Example description"
- corner="Optional"
+  label="Email"
+  type="email"
+  bind={this.user.email}
+  error="Invalid e-mail"
+  placeholder="foo@bar.com"
+  helper="Example description"
+  corner="Optional"
 />
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 #### Radio
 
@@ -273,19 +329,23 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 ##### Parameters
 
-*   `label` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `helper` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** 
+- `label` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `helper` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?**
 
 ##### Examples
 
 ```javascript
-<Radio label="Notifications" helper="Any description" bind={this.user.allowNotification} />
+<Radio
+  label="Notifications"
+  helper="Any description"
+  bind={this.user.allowNotification}
+/>
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 #### Select
 
@@ -293,24 +353,24 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 ##### Parameters
 
-*   `label` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `helper` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `children` **[Element](https://developer.mozilla.org/docs/Web/API/Element)?** 
-*   `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** 
+- `label` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `helper` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `children` **[Element](https://developer.mozilla.org/docs/Web/API/Element)?**
+- `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?**
 
 ##### Examples
 
 ```javascript
 <Select label="Country" helper="Select your country">
- <option value="">Select your country</option>
- <option value="US">United States</option>
- <option value="CA">Canada</option>
+  <option value="">Select your country</option>
+  <option value="US">United States</option>
+  <option value="CA">Canada</option>
 </Select>
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 #### Textarea
 
@@ -318,10 +378,10 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 ##### Parameters
 
-*   `rows` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)?** 
-*   `label` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `helper` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** 
+- `rows` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)?**
+- `label` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `helper` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?**
 
 ##### Examples
 
@@ -329,7 +389,7 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 <Textarea label="Comments" rows={6} bind={this.user.about} />
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 #### Toggle
 
@@ -337,10 +397,10 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 ##### Parameters
 
-*   `label` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** 
+- `label` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?**
 
 ##### Examples
 
@@ -348,11 +408,9 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 <Toggle label="Notifications" bind={this.user.allowNotification} />
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 ### Layouts
-
-
 
 #### Panel
 
@@ -360,21 +418,21 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 ##### Parameters
 
-*   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `children` **[Element](https://developer.mozilla.org/docs/Web/API/Element)?** 
+- `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `children` **[Element](https://developer.mozilla.org/docs/Web/API/Element)?**
 
 ##### Examples
 
 ```javascript
-<Panel id="my-panel" class="bg-gray-100">Child elements here...</Panel>
+<Panel id="my-panel" class="bg-gray-100">
+  Child elements here...
+</Panel>
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 ### Lists
-
-
 
 #### Table
 
@@ -382,39 +440,37 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 ##### Parameters
 
-*   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
-*   `children` **[Element](https://developer.mozilla.org/docs/Web/API/Element)?** 
+- `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+- `children` **[Element](https://developer.mozilla.org/docs/Web/API/Element)?**
 
 ##### Examples
 
 ```javascript
 <Table>
- <Table.THead>
-     <Table.TR>
-     <Table.TH>Name</Table.TH>
-     <Table.TH>Title</Table.TH>
-     <Table.TH>Email</Table.TH>
-     <Table.TH>Role</Table.TH>
-     <Table.TH>Actions</Table.TH>
-   </Table.TR>
- </Table.THead>
- <Table.TBody>
-   <Table.TR>
-     <Table.TD class="font-medium text-gray-900">
-       Lindsay Walton
-     </Table.TD>
-     <Table.TD>Front-end Developer</Table.TD>
-     <Table.TD>lindsay.walton@example.com</Table.TD>
-     <Table.TD>Member</Table.TD>
-     <Table.TD>
-       <a href="#" class="text-indigo-600 hover:text-indigo-900">
-         Edit
-       </a>
-     </Table.TD>
-   </Table.TR>
- </Table.TBody>
+  <Table.THead>
+    <Table.TR>
+      <Table.TH>Name</Table.TH>
+      <Table.TH>Title</Table.TH>
+      <Table.TH>Email</Table.TH>
+      <Table.TH>Role</Table.TH>
+      <Table.TH>Actions</Table.TH>
+    </Table.TR>
+  </Table.THead>
+  <Table.TBody>
+    <Table.TR>
+      <Table.TD class="font-medium text-gray-900">Lindsay Walton</Table.TD>
+      <Table.TD>Front-end Developer</Table.TD>
+      <Table.TD>lindsay.walton@example.com</Table.TD>
+      <Table.TD>Member</Table.TD>
+      <Table.TD>
+        <a href="#" class="text-indigo-600 hover:text-indigo-900">
+          Edit
+        </a>
+      </Table.TD>
+    </Table.TR>
+  </Table.TBody>
 </Table>
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
