@@ -39,305 +39,356 @@ class Application extends Nullstack {
 
   render() {
     return (
-      <Container>
-        <div class="max-w-6xl mx-auto flex flex-col space-y-5">
-          <Panel id="elements">
-            <h2 class="text-2xl font-semibold text-gray-900">Elements</h2>
-            <div class="mt-4">
-              <h3 class="text-1xl font-semibold text-gray-600 mb-2">Button</h3>
-              <Button>Example</Button>
-            </div>
-            <div class="mt-4">
-              <h3 class="text-1xl font-semibold text-gray-600 mb-2">
-                Button Group
-              </h3>
-              <ButtonGroup>
-                <Button class="rounded-r-none">Years</Button>
-                <Button class="rounded-none">Months</Button>
-                <Button class="rounded-l-none">Days</Button>
-              </ButtonGroup>
-            </div>
-            <div class="mt-4">
-              <h3 class="text-1xl font-semibold text-gray-600 mb-2">Avatar</h3>
-              <div class="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:space-x-4">
-                <Avatar placeholder="AE" class="h-10 w-10" />
-                <Avatar
-                  src="https://avatars.githubusercontent.com/u/4829072?v=4"
-                  alt="Avatar"
-                  class="border border-slate-600 h-10 w-10"
-                />
-                <a href="#" class="flex-shrink-0 group block">
-                  <div class="flex items-center">
-                    <div>
-                      <Avatar
-                        src="https://avatars.githubusercontent.com/u/4829072?v=4"
-                        alt="Avatar"
-                        class="h-10 w-10"
-                      />
+      <>
+        <head>
+          <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+          />
+          <link
+            rel="stylesheet"
+            type="text/css"
+            href="https://npmcdn.com/flatpickr/dist/themes/airbnb.css"
+          />
+        </head>
+        <Container>
+          <div class="max-w-6xl mx-auto flex flex-col space-y-5">
+            <Panel id="elements">
+              <h2 class="text-2xl font-semibold text-gray-900">Elements</h2>
+              <div class="mt-4">
+                <h3 class="text-1xl font-semibold text-gray-600 mb-2">
+                  Button
+                </h3>
+                <Button>Example</Button>
+              </div>
+              <div class="mt-4">
+                <h3 class="text-1xl font-semibold text-gray-600 mb-2">
+                  Button Group
+                </h3>
+                <ButtonGroup>
+                  <Button class="rounded-r-none">Years</Button>
+                  <Button class="rounded-none">Months</Button>
+                  <Button class="rounded-l-none">Days</Button>
+                </ButtonGroup>
+              </div>
+              <div class="mt-4">
+                <h3 class="text-1xl font-semibold text-gray-600 mb-2">
+                  Avatar
+                </h3>
+                <div class="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:space-x-4">
+                  <Avatar placeholder="AE" class="h-10 w-10" />
+                  <Avatar
+                    src="https://avatars.githubusercontent.com/u/4829072?v=4"
+                    alt="Avatar"
+                    class="border border-slate-600 h-10 w-10"
+                  />
+                  <a href="#" class="flex-shrink-0 group block">
+                    <div class="flex items-center">
+                      <div>
+                        <Avatar
+                          src="https://avatars.githubusercontent.com/u/4829072?v=4"
+                          alt="Avatar"
+                          class="h-10 w-10"
+                        />
+                      </div>
+                      <div class="ml-3">
+                        <p class="text-sm font-medium text-gray-700 group-hover:text-gray-900">
+                          Fabio Coelho
+                        </p>
+                        <p class="text-xs font-medium text-gray-500 group-hover:text-gray-700">
+                          View profile
+                        </p>
+                      </div>
                     </div>
-                    <div class="ml-3">
-                      <p class="text-sm font-medium text-gray-700 group-hover:text-gray-900">
-                        Fabio Coelho
-                      </p>
-                      <p class="text-xs font-medium text-gray-500 group-hover:text-gray-700">
-                        View profile
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="mt-4">
-              <h3 class="text-1xl font-semibold text-gray-600 mb-2">Badge</h3>
-              <div class="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:space-x-4">
-                <Badge class="bg-blue-100 text-blue-800">Example</Badge>
-                <Badge class="bg-green-100 text-green-800">Example</Badge>
-                <Badge class="bg-yellow-100 text-yellow-800">Example</Badge>
-                <Badge class="bg-red-100 text-red-800">Example</Badge>
-              </div>
-            </div>
-          </Panel>
-          <Panel id="forms">
-            <h2 class="text-2xl font-semibold text-gray-900">Forms</h2>
-            <div class="mt-4">
-              <h3 class="text-1xl font-semibold text-gray-600 mb-2">Toggle</h3>
-              <Toggle bind={this.user.active} />
-            </div>
-            <div class="mt-4">
-              <h3 class="text-1xl font-semibold text-gray-600 mb-2">Radio</h3>
-              <Radio
-                label="Email"
-                helper="4 GB RAM / 2 CPUS / 80 GB SSD Storage"
-                bind={this.user.active}
-              />
-            </div>
-            <div class="mt-4">
-              <h3 class="text-1xl font-semibold text-gray-600 mb-2">Input</h3>
-              <Input
-                label="Email"
-                type="email"
-                bind={this.user.email}
-                error="Invalid email"
-                placeholder="foo@bar.com"
-                helper="Example description"
-                corner="Optional"
-              />
-            </div>
-            <div class="mt-4">
-              <h3 class="text-1xl font-semibold text-gray-600 mb-2">
-                Textarea
-              </h3>
-              <Textarea
-                label="About"
-                bind={this.user.about}
-                helper="Example description"
-              />
-            </div>
-            <div class="mt-4">
-              <h3 class="text-1xl font-semibold text-gray-600 mb-2">Select</h3>
-              <Select
-                label="Location"
-                bind={this.user.country}
-                helper="Example description"
-                disabled={false}
-              >
-                <option value="US">United States</option>
-                <option value="BR">Brazil</option>
-              </Select>
-            </div>
-            <div class="mt-4">
-              <h3 class="text-1xl font-semibold text-gray-600 mb-2">
-                Checkbox
-              </h3>
-              <Checkbox
-                label="Comments"
-                description="Get notified when someones posts a comment on a posting."
-                bind={this.user.active}
-              />
-            </div>
-            <div class="mt-4">
-              <h3 class="text-1xl font-semibold text-gray-600 mb-2">
-                DatePicker
-              </h3>
-              <div class="grid grid-cols-4 gap-4">
-                <DatePicker
-                  label="Date"
-                  helper="Normal date field"
-                  bind={this.user.date}
-                />
-                <DatePicker
-                  label="Range Date"
-                  helper="Range date field"
-                  config={{ mode: "range" }}
-                  bind={this.user.dateRange}
-                />
-              </div>
-            </div>
-          </Panel>
-          <Panel id="lists">
-            <h2 class="text-2xl font-semibold text-gray-900">Lists</h2>
-            <div class="mt-4">
-              <h3 class="text-1xl font-semibold text-gray-600 mb-2">Table</h3>
-              <Table>
-                <Table.THead>
-                  <Table.TR>
-                    <Table.TH>Name</Table.TH>
-                    <Table.TH>Title</Table.TH>
-                    <Table.TH>Email</Table.TH>
-                    <Table.TH>Role</Table.TH>
-                    <Table.TH>Actions</Table.TH>
-                  </Table.TR>
-                </Table.THead>
-                <Table.TBody>
-                  <Table.TR>
-                    <Table.TD class="font-medium text-gray-900">
-                      Fabio Coelho
-                    </Table.TD>
-                    <Table.TD>Software Engineer</Table.TD>
-                    <Table.TD>fabio@ae.studio</Table.TD>
-                    <Table.TD>Member</Table.TD>
-                    <Table.TD>
-                      <a href="#" class="text-indigo-600 hover:text-indigo-900">
-                        Edit
-                      </a>
-                    </Table.TD>
-                  </Table.TR>
-                  <Table.TR>
-                    <Table.TD class="font-medium text-gray-900">
-                      Fabio Coelho
-                    </Table.TD>
-                    <Table.TD>Software Engineer</Table.TD>
-                    <Table.TD>fabio@ae.studio</Table.TD>
-                    <Table.TD>Member</Table.TD>
-                    <Table.TD>
-                      <a href="#" class="text-indigo-600 hover:text-indigo-900">
-                        Edit
-                      </a>
-                    </Table.TD>
-                  </Table.TR>
-                  <Table.TR>
-                    <Table.TD class="font-medium text-gray-900">
-                      Fabio Coelho
-                    </Table.TD>
-                    <Table.TD>Software Engineer</Table.TD>
-                    <Table.TD>fabio@ae.studio</Table.TD>
-                    <Table.TD>Member</Table.TD>
-                    <Table.TD>
-                      <a href="#" class="text-indigo-600 hover:text-indigo-900">
-                        Edit
-                      </a>
-                    </Table.TD>
-                  </Table.TR>
-                </Table.TBody>
-              </Table>
-            </div>
-          </Panel>
-          <Panel id="feedbacks">
-            <h2 class="text-2xl font-semibold text-gray-900">Feedbacks</h2>
-            <div class="mt-4">
-              <h3 class="text-1xl font-semibold text-gray-600 mb-2">Alert</h3>
-              <Alert class="flex-1 md:flex md:justify-between">
-                <h3 class="text-sm font-medium text-blue-800">Info</h3>
-                <p class="text-sm text-blue-700">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Aliquid pariatur, ipsum similique veniam.
-                </p>
-                <p class="mt-3 text-sm md:mt-0 md:ml-6">
-                  <a
-                    href="#"
-                    class="whitespace-nowrap font-medium text-blue-700 hover:text-blue-600"
-                  >
-                    Details <span aria-hidden="true">&rarr;</span>
                   </a>
+                </div>
+              </div>
+              <div class="mt-4">
+                <h3 class="text-1xl font-semibold text-gray-600 mb-2">Badge</h3>
+                <div class="flex flex-col space-y-4 sm:space-y-0 sm:flex-row sm:space-x-4">
+                  <Badge class="bg-blue-100 text-blue-800">Example</Badge>
+                  <Badge class="bg-green-100 text-green-800">Example</Badge>
+                  <Badge class="bg-yellow-100 text-yellow-800">Example</Badge>
+                  <Badge class="bg-red-100 text-red-800">Example</Badge>
+                </div>
+              </div>
+            </Panel>
+            <Panel id="forms">
+              <h2 class="text-2xl font-semibold text-gray-900">Forms</h2>
+              <div class="mt-4">
+                <h3 class="text-1xl font-semibold text-gray-600 mb-2">
+                  Toggle
+                </h3>
+                <Toggle bind={this.user.active} />
+              </div>
+              <div class="mt-4">
+                <h3 class="text-1xl font-semibold text-gray-600 mb-2">Radio</h3>
+                <Radio
+                  label="Email"
+                  helper="4 GB RAM / 2 CPUS / 80 GB SSD Storage"
+                  bind={this.user.active}
+                />
+              </div>
+              <div class="mt-4">
+                <h3 class="text-1xl font-semibold text-gray-600 mb-2">Input</h3>
+                <Input
+                  label="Email"
+                  type="email"
+                  bind={this.user.email}
+                  error="Invalid email"
+                  placeholder="foo@bar.com"
+                  helper="Example description"
+                  corner="Optional"
+                />
+              </div>
+              <div class="mt-4">
+                <h3 class="text-1xl font-semibold text-gray-600 mb-2">
+                  Textarea
+                </h3>
+                <Textarea
+                  label="About"
+                  bind={this.user.about}
+                  helper="Example description"
+                />
+              </div>
+              <div class="mt-4">
+                <h3 class="text-1xl font-semibold text-gray-600 mb-2">
+                  Select
+                </h3>
+                <Select
+                  label="Location"
+                  bind={this.user.country}
+                  helper="Example description"
+                  disabled={false}
+                >
+                  <option value="US">United States</option>
+                  <option value="BR">Brazil</option>
+                </Select>
+              </div>
+              <div class="mt-4">
+                <h3 class="text-1xl font-semibold text-gray-600 mb-2">
+                  Checkbox
+                </h3>
+                <Checkbox
+                  label="Comments"
+                  description="Get notified when someones posts a comment on a posting."
+                  bind={this.user.active}
+                />
+              </div>
+              <div class="mt-4">
+                <h3 class="text-1xl font-semibold text-gray-600 mb-2">
+                  DatePicker
+                </h3>
+                <div class="grid grid-cols-4 gap-4">
+                  <DatePicker
+                    label="Date"
+                    helper="Normal date field"
+                    bind={this.user.date}
+                  />
+                  <DatePicker
+                    label="Range Date"
+                    helper="Range date field"
+                    config={{ mode: "range" }}
+                    bind={this.user.dateRange}
+                  />
+                </div>
+                <hr class="my-3" />
+                <p class="text-sm text-gray-500 mb-0">
+                  Include the css styles as follows:
                 </p>
-              </Alert>
-            </div>
-            <div class="mt-4">
-              <Alert variant="success">
-                <h3 class="text-sm font-medium text-green-800">Success</h3>
-                <div class="mt-2 text-sm text-green-700">
-                  <p>
+                <div class="prose my-3">
+                  <pre class="mt-2">
+                    <code>
+                      {`<head>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+  />
+  <link
+    rel="stylesheet"
+    type="text/css"
+    href="https://npmcdn.com/flatpickr/dist/themes/airbnb.css"
+  />
+</head>`}
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </Panel>
+            <Panel id="lists">
+              <h2 class="text-2xl font-semibold text-gray-900">Lists</h2>
+              <div class="mt-4">
+                <h3 class="text-1xl font-semibold text-gray-600 mb-2">Table</h3>
+                <Table>
+                  <Table.THead>
+                    <Table.TR>
+                      <Table.TH>Name</Table.TH>
+                      <Table.TH>Title</Table.TH>
+                      <Table.TH>Email</Table.TH>
+                      <Table.TH>Role</Table.TH>
+                      <Table.TH>Actions</Table.TH>
+                    </Table.TR>
+                  </Table.THead>
+                  <Table.TBody>
+                    <Table.TR>
+                      <Table.TD class="font-medium text-gray-900">
+                        Fabio Coelho
+                      </Table.TD>
+                      <Table.TD>Software Engineer</Table.TD>
+                      <Table.TD>fabio@ae.studio</Table.TD>
+                      <Table.TD>Member</Table.TD>
+                      <Table.TD>
+                        <a
+                          href="#"
+                          class="text-indigo-600 hover:text-indigo-900"
+                        >
+                          Edit
+                        </a>
+                      </Table.TD>
+                    </Table.TR>
+                    <Table.TR>
+                      <Table.TD class="font-medium text-gray-900">
+                        Fabio Coelho
+                      </Table.TD>
+                      <Table.TD>Software Engineer</Table.TD>
+                      <Table.TD>fabio@ae.studio</Table.TD>
+                      <Table.TD>Member</Table.TD>
+                      <Table.TD>
+                        <a
+                          href="#"
+                          class="text-indigo-600 hover:text-indigo-900"
+                        >
+                          Edit
+                        </a>
+                      </Table.TD>
+                    </Table.TR>
+                    <Table.TR>
+                      <Table.TD class="font-medium text-gray-900">
+                        Fabio Coelho
+                      </Table.TD>
+                      <Table.TD>Software Engineer</Table.TD>
+                      <Table.TD>fabio@ae.studio</Table.TD>
+                      <Table.TD>Member</Table.TD>
+                      <Table.TD>
+                        <a
+                          href="#"
+                          class="text-indigo-600 hover:text-indigo-900"
+                        >
+                          Edit
+                        </a>
+                      </Table.TD>
+                    </Table.TR>
+                  </Table.TBody>
+                </Table>
+              </div>
+            </Panel>
+            <Panel id="feedbacks">
+              <h2 class="text-2xl font-semibold text-gray-900">Feedbacks</h2>
+              <div class="mt-4">
+                <h3 class="text-1xl font-semibold text-gray-600 mb-2">Alert</h3>
+                <Alert class="flex-1 md:flex md:justify-between">
+                  <h3 class="text-sm font-medium text-blue-800">Info</h3>
+                  <p class="text-sm text-blue-700">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Aliquid pariatur, ipsum similique veniam.
                   </p>
-                </div>
-              </Alert>
-            </div>
-            <div class="mt-4">
-              <Alert variant="warning">
-                <h3 class="text-sm font-medium text-yellow-800">Warning</h3>
-                <div class="mt-2 text-sm text-yellow-700">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aliquid pariatur, ipsum similique veniam.
-                  </p>
-                </div>
-              </Alert>
-            </div>
-            <div class="mt-4">
-              <Alert variant="danger">
-                <h3 class="text-sm font-medium text-red-800">Danger</h3>
-                <div class="mt-2 text-sm text-red-700">
-                  <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Aliquid pariatur, ipsum similique veniam.
-                  </p>
-                </div>
-              </Alert>
-            </div>
-          </Panel>
-          <Panel id="overlays">
-            <h2 class="text-2xl font-semibold text-gray-900">Overlays</h2>
-            <div class="mt-4">
-              <h3 class="text-1xl font-semibold text-gray-600 mb-2">Modal</h3>
-              <Button onclick={() => (this.modalVisible = true)}>
-                Show Modal
-              </Button>
-              <Modal visible={this.modalVisible}>
-                <Modal.Close onclick={() => (this.modalVisible = false)} />
-                <Modal.Body>
-                  <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
-                    <svg
-                      class="h-6 w-6 text-green-600"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      aria-hidden="true"
+                  <p class="mt-3 text-sm md:mt-0 md:ml-6">
+                    <a
+                      href="#"
+                      class="whitespace-nowrap font-medium text-blue-700 hover:text-blue-600"
                     >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M5 13l4 4L19 7"
-                      />
-                    </svg>
+                      Details <span aria-hidden="true">&rarr;</span>
+                    </a>
+                  </p>
+                </Alert>
+              </div>
+              <div class="mt-4">
+                <Alert variant="success">
+                  <h3 class="text-sm font-medium text-green-800">Success</h3>
+                  <div class="mt-2 text-sm text-green-700">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aliquid pariatur, ipsum similique veniam.
+                    </p>
                   </div>
-                  <div class="mt-3 text-center sm:mt-5">
-                    <h3
-                      class="text-lg leading-6 font-medium text-gray-900"
-                      id="modal-title"
-                    >
-                      Payment successful
-                    </h3>
-                    <div class="mt-2">
-                      <p class="text-sm text-gray-500">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Consequatur amet labore.
-                      </p>
+                </Alert>
+              </div>
+              <div class="mt-4">
+                <Alert variant="warning">
+                  <h3 class="text-sm font-medium text-yellow-800">Warning</h3>
+                  <div class="mt-2 text-sm text-yellow-700">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aliquid pariatur, ipsum similique veniam.
+                    </p>
+                  </div>
+                </Alert>
+              </div>
+              <div class="mt-4">
+                <Alert variant="danger">
+                  <h3 class="text-sm font-medium text-red-800">Danger</h3>
+                  <div class="mt-2 text-sm text-red-700">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Aliquid pariatur, ipsum similique veniam.
+                    </p>
+                  </div>
+                </Alert>
+              </div>
+            </Panel>
+            <Panel id="overlays">
+              <h2 class="text-2xl font-semibold text-gray-900">Overlays</h2>
+              <div class="mt-4">
+                <h3 class="text-1xl font-semibold text-gray-600 mb-2">Modal</h3>
+                <Button onclick={() => (this.modalVisible = true)}>
+                  Show Modal
+                </Button>
+                <Modal visible={this.modalVisible}>
+                  <Modal.Close onclick={() => (this.modalVisible = false)} />
+                  <Modal.Body>
+                    <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100">
+                      <svg
+                        class="h-6 w-6 text-green-600"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
                     </div>
-                  </div>
-                </Modal.Body>
-                <Modal.Footer>
-                  <Button onclick={() => (this.modalVisible = false)}>
-                    Go back to dashboard
-                  </Button>
-                </Modal.Footer>
-              </Modal>
-            </div>
-          </Panel>
-        </div>
-      </Container>
+                    <div class="mt-3 text-center sm:mt-5">
+                      <h3
+                        class="text-lg leading-6 font-medium text-gray-900"
+                        id="modal-title"
+                      >
+                        Payment successful
+                      </h3>
+                      <div class="mt-2">
+                        <p class="text-sm text-gray-500">
+                          Lorem ipsum dolor sit amet consectetur adipisicing
+                          elit. Consequatur amet labore.
+                        </p>
+                      </div>
+                    </div>
+                  </Modal.Body>
+                  <Modal.Footer>
+                    <Button onclick={() => (this.modalVisible = false)}>
+                      Go back to dashboard
+                    </Button>
+                  </Modal.Footer>
+                </Modal>
+              </div>
+            </Panel>
+          </div>
+        </Container>
+      </>
     );
   }
 }

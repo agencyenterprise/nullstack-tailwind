@@ -4,9 +4,6 @@ import Label from "../elements/Label.nts";
 import Helper from "../elements/Helper.nts";
 import { classList } from "../../utils";
 
-import "flatpickr/dist/flatpickr.min.css";
-import "flatpickr/dist/themes/airbnb.css";
-
 interface DatePickerProps {
   class: string;
   config?: object;
