@@ -12,7 +12,10 @@ interface PanelProps {
  * @param {?string} class
  * @param {?Element} children
  * @returns {Element}
- * @example <Panel id="my-panel" class="bg-gray-100">Child elements here...</Panel>
+ * @example
+ * import { Panel } from "nullstack-tailwind";
+ *
+ * <Panel id="my-panel" class="bg-gray-100">Child elements here...</Panel>
  */
 export default function Panel(props: PanelProps) {
   const { children, id, class: klass } = props;

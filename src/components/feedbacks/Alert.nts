@@ -17,6 +17,8 @@ interface AlertProps {
  * @param {!Element} children
  * @returns {Element}
  * @example
+ * import { Alert } from "nullstack-tailwind";
+ *
  * <Alert variant="success" icon={<Icon name="check" />}>
  *  <h3 class="text-sm font-medium text-green-800">Success</h3>
  *  <div class="mt-2 text-sm text-green-700">

@@ -27,6 +27,8 @@ interface InputProps {
  * @param {?boolean} disabled
  * @returns {Element}
  * @example
+ * import { Input } from "nullstack-tailwind";
+ *
  * <Input
  *  label="Email"
  *  type="email"
@@ -42,7 +44,7 @@ export default function Input(props: InputProps) {
     label,
     id,
     class: klass,
-    type,
+    type = "text",
     placeholder,
     name,
     source,

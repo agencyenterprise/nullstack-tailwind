@@ -21,6 +21,8 @@ interface RadioProps {
  * @param {?boolean} disabled
  * @returns {Element}
  * @example
+ * import { Radio } from "nullstack-tailwind";
+ *
  * <Radio label="Notifications" helper="Any description" bind={this.user.allowNotification} />
  */
 class Radio extends Nullstack {

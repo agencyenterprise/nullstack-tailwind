@@ -5,6 +5,8 @@
  * @param {?Element} children
  * @returns {Element}
  * @example
+ * import { Table } from "nullstack-tailwind";
+ *
  * <Table>
  *  <Table.THead>
  *      <Table.TR>

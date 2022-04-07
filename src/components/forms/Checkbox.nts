@@ -22,6 +22,8 @@ interface CheckboxProps {
  * @param {?string} id
  * @returns {Element}
  * @example
+ * import { Checkbox } from "nullstack-tailwind";
+ *
  * <Checkbox label="Comments" description="Get notified when someones posts a comment on a posting." bind={this.user.allowNotification} />
  */
 class Checkbox extends Nullstack {

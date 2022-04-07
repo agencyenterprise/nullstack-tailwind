@@ -21,6 +21,8 @@ interface TextareaProps {
  * @param {?boolean} disabled
  * @returns {Element}
  * @example
+ * import { Textarea } from "nullstack-tailwind";
+ *
  * <Textarea label="Comments" rows={6} bind={this.user.about} />
  */
 export default function Textarea(props: TextareaProps) {

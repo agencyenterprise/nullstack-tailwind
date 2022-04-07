@@ -16,7 +16,10 @@ interface AvatarProps {
  * @param {?string} id
  * @param {?string} class
  * @returns {Element}
- * @example <Avatar class="h-10 w-10" src="https://avatars0.githubusercontent.com/u/1234?s=460&v=4" alt="Avatar" />
+ * @example
+ * import { Avatar } from "nullstack-tailwind";
+ *
+ * <Avatar class="h-10 w-10" src="https://avatars0.githubusercontent.com/u/1234?s=460&v=4" alt="Avatar" />
  */
 export default function Avatar(props: AvatarProps) {
   const { src, alt, id, class: klass, placeholder } = props;

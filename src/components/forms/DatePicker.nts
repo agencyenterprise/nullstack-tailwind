@@ -26,7 +26,9 @@ interface DatePickerProps {
  * @param {?string} label
  * @returns {Element}
  * @example
- * <DatePicker label="Comments" config={{ mode: "range" }} bind={this.user.about} />
+ * import { DatePicker } from "nullstack-tailwind";
+ *
+ * <DatePicker label="Comments" config={{}} bind={this.user.createdAt} />
  */
 class DatePicker extends Nullstack {
   async hydrate({ self, config }) {

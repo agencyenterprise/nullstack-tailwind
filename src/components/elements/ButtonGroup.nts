@@ -13,6 +13,8 @@ interface ButtonGroupProps {
  * @param {?string} class
  * @returns {Element}
  * @example
+ * import { ButtonGroup, Button } from "nullstack-tailwind";
+ *
  * <ButtonGroup>
  *  <Button class="rounded-r-none">Years</Button>
  *  <Button class="rounded-none">Months</Button>

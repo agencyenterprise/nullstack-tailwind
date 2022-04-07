@@ -77,400 +77,422 @@ Open <http://localhost:3000> to view it in the browser.
 
 #### Table of Contents
 
-- [Elements](#elements)
-  - [Avatar](#avatar)
-    - [Parameters](#parameters)
-    - [Examples](#examples)
-  - [Badge](#badge)
-    - [Parameters](#parameters-1)
-    - [Examples](#examples-1)
-  - [Button](#button)
-    - [Parameters](#parameters-2)
-    - [Examples](#examples-2)
-  - [ButtonGroup](#buttongroup)
-    - [Parameters](#parameters-3)
-    - [Examples](#examples-3)
-- [Feedbacks](#feedbacks)
-  - [Alert](#alert)
-    - [Parameters](#parameters-4)
-    - [Examples](#examples-4)
-- [Forms](#forms)
-  - [Checkbox](#checkbox)
-    - [Parameters](#parameters-5)
-    - [Examples](#examples-5)
-  - [DatePicker](#datepicker)
-    - [Parameters](#parameters-6)
-    - [Examples](#examples-6)
-  - [Input](#input)
-    - [Parameters](#parameters-7)
-    - [Examples](#examples-7)
-  - [Radio](#radio)
-    - [Parameters](#parameters-8)
-    - [Examples](#examples-8)
-  - [Select](#select)
-    - [Parameters](#parameters-9)
-    - [Examples](#examples-9)
-  - [Textarea](#textarea)
-    - [Parameters](#parameters-10)
-    - [Examples](#examples-10)
-  - [Toggle](#toggle)
-    - [Parameters](#parameters-11)
-    - [Examples](#examples-11)
-- [Layouts](#layouts)
-  - [Panel](#panel)
-    - [Parameters](#parameters-12)
-    - [Examples](#examples-12)
-- [Lists](#lists)
-  - [Table](#table)
-    - [Parameters](#parameters-13)
-    - [Examples](#examples-13)
+*   [Elements](#elements)
+    *   [Avatar](#avatar)
+        *   [Parameters](#parameters)
+        *   [Examples](#examples)
+    *   [Badge](#badge)
+        *   [Parameters](#parameters-1)
+        *   [Examples](#examples-1)
+    *   [Button](#button)
+        *   [Parameters](#parameters-2)
+        *   [Examples](#examples-2)
+    *   [ButtonGroup](#buttongroup)
+        *   [Parameters](#parameters-3)
+        *   [Examples](#examples-3)
+*   [Feedbacks](#feedbacks)
+    *   [Alert](#alert)
+        *   [Parameters](#parameters-4)
+        *   [Examples](#examples-4)
+*   [Forms](#forms)
+    *   [Checkbox](#checkbox)
+        *   [Parameters](#parameters-5)
+        *   [Examples](#examples-5)
+    *   [DatePicker](#datepicker)
+        *   [Parameters](#parameters-6)
+        *   [Examples](#examples-6)
+    *   [Input](#input)
+        *   [Parameters](#parameters-7)
+        *   [Examples](#examples-7)
+    *   [Radio](#radio)
+        *   [Parameters](#parameters-8)
+        *   [Examples](#examples-8)
+    *   [Select](#select)
+        *   [Parameters](#parameters-9)
+        *   [Examples](#examples-9)
+    *   [Textarea](#textarea)
+        *   [Parameters](#parameters-10)
+        *   [Examples](#examples-10)
+    *   [Toggle](#toggle)
+        *   [Parameters](#parameters-11)
+        *   [Examples](#examples-11)
+*   [Layouts](#layouts)
+    *   [Panel](#panel)
+        *   [Parameters](#parameters-12)
+        *   [Examples](#examples-12)
+*   [Lists](#lists)
+    *   [Table](#table)
+        *   [Parameters](#parameters-13)
+        *   [Examples](#examples-13)
 
 ### Elements
 
+
+
 #### Avatar
 
-[src/components/elements/Avatar.nts:21-46](https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/elements/Avatar.nts#L21-L46 "Source code on GitHub")
+[src/components/elements/Avatar.nts:24-49](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/elements/Avatar.nts#L24-L49 "Source code on GitHub")
 
 ##### Parameters
 
-- `src` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `alt` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `placeholder` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+*   `src` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `alt` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `placeholder` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
 
 ##### Examples
 
 ```javascript
-<Avatar
-  class="h-10 w-10"
-  src="https://avatars0.githubusercontent.com/u/1234?s=460&v=4"
-  alt="Avatar"
-/>
+import { Avatar } from "nullstack-tailwind";
+
+<Avatar class="h-10 w-10" src="https://avatars0.githubusercontent.com/u/1234?s=460&v=4" alt="Avatar" />
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
 
 #### Badge
 
-[src/components/elements/Badge.nts:17-31](https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/elements/Badge.nts#L17-L31 "Source code on GitHub")
+[src/components/elements/Badge.nts:20-34](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/elements/Badge.nts#L20-L34 "Source code on GitHub")
 
 ##### Parameters
 
-- `children` **\![Element](https://developer.mozilla.org/docs/Web/API/Element)**
-- `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+*   `children` **\![Element](https://developer.mozilla.org/docs/Web/API/Element)** 
+*   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
 
 ##### Examples
 
 ```javascript
+import { Badge } from "nullstack-tailwind";
+
 <Badge>Example</Badge>
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
 
 #### Button
 
-[src/components/elements/Button.nts:21-37](https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/elements/Button.nts#L21-L37 "Source code on GitHub")
+[src/components/elements/Button.nts:24-40](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/elements/Button.nts#L24-L40 "Source code on GitHub")
 
 ##### Parameters
 
-- `children` **\![Element](https://developer.mozilla.org/docs/Web/API/Element)**
-- `onclick` **[function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)?**
-- `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `type` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+*   `children` **\![Element](https://developer.mozilla.org/docs/Web/API/Element)** 
+*   `onclick` **[function](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Statements/function)?** 
+*   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `type` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
 
 ##### Examples
 
 ```javascript
+import { Button } from "nullstack-tailwind";
+
 <Button onclick={() => alert("Hello")}>Hello</Button>
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
 
 #### ButtonGroup
 
-[src/components/elements/ButtonGroup.nts:22-33](https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/elements/ButtonGroup.nts#L22-L33 "Source code on GitHub")
+[src/components/elements/ButtonGroup.nts:24-35](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/elements/ButtonGroup.nts#L24-L35 "Source code on GitHub")
 
 ##### Parameters
 
-- `children` **\![Element](https://developer.mozilla.org/docs/Web/API/Element)**
-- `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+*   `children` **\![Element](https://developer.mozilla.org/docs/Web/API/Element)** 
+*   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
 
 ##### Examples
 
 ```javascript
+import { ButtonGroup, Button } from "nullstack-tailwind";
+
 <ButtonGroup>
-  <Button class="rounded-r-none">Years</Button>
-  <Button class="rounded-none">Months</Button>
-  <Button class="rounded-l-none">Days</Button>
+ <Button class="rounded-r-none">Years</Button>
+ <Button class="rounded-none">Months</Button>
+ <Button class="rounded-l-none">Days</Button>
 </ButtonGroup>
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
 
 ### Feedbacks
 
+
+
 #### Alert
 
-[src/components/feedbacks/Alert.nts:30-118](https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/feedbacks/Alert.nts#L30-L118 "Source code on GitHub")
+[src/components/feedbacks/Alert.nts:32-120](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/feedbacks/Alert.nts#L32-L120 "Source code on GitHub")
 
 ##### Parameters
 
-- `variant` **(`"success"` | `"info"` | `"warning"` | `"danger"`)?**
-- `icon` **[SVGElement](https://developer.mozilla.org/docs/Web/SVG/Element/animate)?**
-- `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `children` **\![Element](https://developer.mozilla.org/docs/Web/API/Element)**
+*   `variant` **(`"success"` | `"info"` | `"warning"` | `"danger"`)?** 
+*   `icon` **[SVGElement](https://developer.mozilla.org/docs/Web/SVG/Element/animate)?** 
+*   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `children` **\![Element](https://developer.mozilla.org/docs/Web/API/Element)** 
 
 ##### Examples
 
 ```javascript
+import { Alert } from "nullstack-tailwind";
+
 <Alert variant="success" icon={<Icon name="check" />}>
-  <h3 class="text-sm font-medium text-green-800">Success</h3>
-  <div class="mt-2 text-sm text-green-700">
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid pariatur,
-      ipsum similique veniam.
-    </p>
-  </div>
+ <h3 class="text-sm font-medium text-green-800">Success</h3>
+ <div class="mt-2 text-sm text-green-700">
+   <p>
+     Lorem ipsum dolor sit amet consectetur adipisicing elit.
+     Aliquid pariatur, ipsum similique veniam.
+   </p>
+ </div>
 </Alert>
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
 
 ### Forms
 
+
+
 #### Checkbox
 
-[src/components/forms/Checkbox.nts:27-68](https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/forms/Checkbox.nts#L27-L68 "Source code on GitHub")
+[src/components/forms/Checkbox.nts:29-70](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/forms/Checkbox.nts#L29-L70 "Source code on GitHub")
 
 ##### Parameters
 
-- `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `description` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?**
-- `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+*   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `description` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** 
+*   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
 
 ##### Examples
 
 ```javascript
-<Checkbox
-  label="Comments"
-  description="Get notified when someones posts a comment on a posting."
-  bind={this.user.allowNotification}
-/>
+import { Checkbox } from "nullstack-tailwind";
+
+<Checkbox label="Comments" description="Get notified when someones posts a comment on a posting." bind={this.user.allowNotification} />
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
 
 #### DatePicker
 
-[src/components/forms/DatePicker.nts:34-63](https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/forms/DatePicker.nts#L34-L63 "Source code on GitHub")
+[src/components/forms/DatePicker.nts:33-62](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/forms/DatePicker.nts#L33-L62 "Source code on GitHub")
 
 ##### Parameters
 
-- `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?**
-- `children` **[Element](https://developer.mozilla.org/docs/Web/API/Element)?**
-- `config` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** flatpickr config
-- `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `helper` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `label` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
+*   `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** 
+*   `children` **[Element](https://developer.mozilla.org/docs/Web/API/Element)?** 
+*   `config` **[object](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object)?** flatpickr config
+*   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `helper` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `label` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
 
 ##### Examples
 
 ```javascript
-<DatePicker
-  label="Comments"
-  config={{ mode: "range" }}
-  bind={this.user.about}
-/>
+import { DatePicker } from "nullstack-tailwind";
+
+<DatePicker label="Comments" config={{}} bind={this.user.createdAt} />
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
 
 #### Input
 
-[src/components/forms/Input.nts:40-104](https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/forms/Input.nts#L40-L104 "Source code on GitHub")
+[src/components/forms/Input.nts:42-106](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/forms/Input.nts#L42-L106 "Source code on GitHub")
 
 ##### Parameters
 
-- `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `placeholder` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `helper` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `corner` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `error` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `type` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?**
+*   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `placeholder` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `helper` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `corner` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `error` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `type` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** 
 
 ##### Examples
 
 ```javascript
+import { Input } from "nullstack-tailwind";
+
 <Input
-  label="Email"
-  type="email"
-  bind={this.user.email}
-  error="Invalid e-mail"
-  placeholder="foo@bar.com"
-  helper="Example description"
-  corner="Optional"
+ label="Email"
+ type="email"
+ bind={this.user.email}
+ error="Invalid e-mail"
+ placeholder="foo@bar.com"
+ helper="Example description"
+ corner="Optional"
 />
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
 
 #### Radio
 
-[src/components/forms/Radio.nts:26-73](https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/forms/Radio.nts#L26-L73 "Source code on GitHub")
+[src/components/forms/Radio.nts:28-75](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/forms/Radio.nts#L28-L75 "Source code on GitHub")
 
 ##### Parameters
 
-- `label` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `helper` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?**
+*   `label` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `helper` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** 
 
 ##### Examples
 
 ```javascript
-<Radio
-  label="Notifications"
-  helper="Any description"
-  bind={this.user.allowNotification}
-/>
+import { Radio } from "nullstack-tailwind";
+
+<Radio label="Notifications" helper="Any description" bind={this.user.allowNotification} />
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
 
 #### Select
 
-[src/components/forms/Select.nts:32-62](https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/forms/Select.nts#L32-L62 "Source code on GitHub")
+[src/components/forms/Select.nts:34-64](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/forms/Select.nts#L34-L64 "Source code on GitHub")
 
 ##### Parameters
 
-- `label` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `helper` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `children` **[Element](https://developer.mozilla.org/docs/Web/API/Element)?**
-- `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?**
+*   `label` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `helper` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `children` **[Element](https://developer.mozilla.org/docs/Web/API/Element)?** 
+*   `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** 
 
 ##### Examples
 
 ```javascript
+import { Select } from "nullstack-tailwind";
+
 <Select label="Country" helper="Select your country">
-  <option value="">Select your country</option>
-  <option value="US">United States</option>
-  <option value="CA">Canada</option>
+ <option value="">Select your country</option>
+ <option value="US">United States</option>
+ <option value="CA">Canada</option>
 </Select>
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
 
 #### Textarea
 
-[src/components/forms/Textarea.nts:26-59](https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/forms/Textarea.nts#L26-L59 "Source code on GitHub")
+[src/components/forms/Textarea.nts:28-61](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/forms/Textarea.nts#L28-L61 "Source code on GitHub")
 
 ##### Parameters
 
-- `rows` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)?**
-- `label` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `helper` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?**
+*   `rows` **[number](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number)?** 
+*   `label` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `helper` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** 
 
 ##### Examples
 
 ```javascript
+import { Textarea } from "nullstack-tailwind";
+
 <Textarea label="Comments" rows={6} bind={this.user.about} />
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
 
 #### Toggle
 
-[src/components/forms/Toggle.nts:24-58](https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/forms/Toggle.nts#L24-L58 "Source code on GitHub")
+[src/components/forms/Toggle.nts:26-60](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/forms/Toggle.nts#L26-L60 "Source code on GitHub")
 
 ##### Parameters
 
-- `label` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?**
+*   `label` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `disabled` **[boolean](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Boolean)?** 
 
 ##### Examples
 
 ```javascript
+import { Toggle } from "nullstack-tailwind";
+
 <Toggle label="Notifications" bind={this.user.allowNotification} />
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
 
 ### Layouts
 
+
+
 #### Panel
 
-[src/components/layouts/Panel.nts:17-27](https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/layouts/Panel.nts#L17-L27 "Source code on GitHub")
+[src/components/layouts/Panel.nts:20-30](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/layouts/Panel.nts#L20-L30 "Source code on GitHub")
 
 ##### Parameters
 
-- `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `children` **[Element](https://developer.mozilla.org/docs/Web/API/Element)?**
+*   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `children` **[Element](https://developer.mozilla.org/docs/Web/API/Element)?** 
 
 ##### Examples
 
 ```javascript
-<Panel id="my-panel" class="bg-gray-100">
-  Child elements here...
-</Panel>
+import { Panel } from "nullstack-tailwind";
+
+<Panel id="my-panel" class="bg-gray-100">Child elements here...</Panel>
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 
 
 ### Lists
 
+
+
 #### Table
 
-[src/components/lists/Table.nts:35-44](https://github.com/fccoelho7/nullstack-tailwind/blob/795aa98b90208df1f69792931f7e14e6cb853b08/src/components/lists/Table.nts#L35-L44 "Source code on GitHub")
+[src/components/lists/Table.nts:37-46](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/lists/Table.nts#L37-L46 "Source code on GitHub")
 
 ##### Parameters
 
-- `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?**
-- `children` **[Element](https://developer.mozilla.org/docs/Web/API/Element)?**
+*   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `children` **[Element](https://developer.mozilla.org/docs/Web/API/Element)?** 
 
 ##### Examples
 
 ```javascript
+import { Table } from "nullstack-tailwind";
+
 <Table>
-  <Table.THead>
-    <Table.TR>
-      <Table.TH>Name</Table.TH>
-      <Table.TH>Title</Table.TH>
-      <Table.TH>Email</Table.TH>
-      <Table.TH>Role</Table.TH>
-      <Table.TH>Actions</Table.TH>
-    </Table.TR>
-  </Table.THead>
-  <Table.TBody>
-    <Table.TR>
-      <Table.TD class="font-medium text-gray-900">Lindsay Walton</Table.TD>
-      <Table.TD>Front-end Developer</Table.TD>
-      <Table.TD>lindsay.walton@example.com</Table.TD>
-      <Table.TD>Member</Table.TD>
-      <Table.TD>
-        <a href="#" class="text-indigo-600 hover:text-indigo-900">
-          Edit
-        </a>
-      </Table.TD>
-    </Table.TR>
-  </Table.TBody>
+ <Table.THead>
+     <Table.TR>
+     <Table.TH>Name</Table.TH>
+     <Table.TH>Title</Table.TH>
+     <Table.TH>Email</Table.TH>
+     <Table.TH>Role</Table.TH>
+     <Table.TH>Actions</Table.TH>
+   </Table.TR>
+ </Table.THead>
+ <Table.TBody>
+   <Table.TR>
+     <Table.TD class="font-medium text-gray-900">
+       Lindsay Walton
+     </Table.TD>
+     <Table.TD>Front-end Developer</Table.TD>
+     <Table.TD>lindsay.walton@example.com</Table.TD>
+     <Table.TD>Member</Table.TD>
+     <Table.TD>
+       <a href="#" class="text-indigo-600 hover:text-indigo-900">
+         Edit
+       </a>
+     </Table.TD>
+   </Table.TR>
+ </Table.TBody>
 </Table>
 ```
 
-Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
+Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)** 

@@ -16,7 +16,10 @@ interface ButtonProps {
  * @param {?string} class
  * @param {?string} type
  * @returns {Element}
- * @example <Button onclick={() => alert("Hello")}>Hello</Button>
+ * @example
+ * import { Button } from "nullstack-tailwind";
+ *
+ * <Button onclick={() => alert("Hello")}>Hello</Button>
  */
 export default function Button(props: ButtonProps) {
   const { type = "button", id, class: klass, onclick, children } = props;

@@ -19,6 +19,8 @@ interface ToggleProps {
  * @param {?boolean} disabled
  * @returns {Element}
  * @example
+ * import { Toggle } from "nullstack-tailwind";
+ *
  * <Toggle label="Notifications" bind={this.user.allowNotification} />
  */
 class Toggle extends Nullstack {

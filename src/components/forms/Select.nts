@@ -23,6 +23,8 @@ interface SelectProps {
  * @param {?boolean} disabled
  * @returns {Element}
  * @example
+ * import { Select } from "nullstack-tailwind";
+ *
  * <Select label="Country" helper="Select your country">
  *  <option value="">Select your country</option>
  *  <option value="US">United States</option>

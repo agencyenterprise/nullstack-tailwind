@@ -12,7 +12,10 @@ interface BadgeProps {
  * @param {?string} id
  * @param {?string} class
  * @returns {Element}
- * @example <Badge>Example</Badge>
+ * @example
+ * import { Badge } from "nullstack-tailwind";
+ *
+ * <Badge>Example</Badge>
  */
 export default function Badge(props: BadgeProps) {
   const { id, class: klass, children } = props;
