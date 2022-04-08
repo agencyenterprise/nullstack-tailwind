@@ -30,6 +30,7 @@ class Application extends Nullstack {
     country: "BR",
     date: "2023-09-07",
     dateRange: "2023-09-07 to 2023-09-09",
+    weight: 80
   };
 
   prepare({ page }: ApplicationClientContext) {
@@ -139,6 +140,15 @@ class Application extends Nullstack {
                   placeholder="foo@bar.com"
                   helper="Example description"
                   corner="Optional"
+                />
+                 <Input
+                  label="Weight"
+                  type="number"
+                  bind={this.user.weight}
+                  placeholder="70"
+                  helper="Example description"
+                  corner="Optional"
+                  step="0.1"
                 />
               </div>
               <div class="mt-4">

@@ -13,6 +13,8 @@ interface InputProps {
   placeholder?: string;
   source: string;
   type?: string;
+  step?: string;
+  disabled?: boolean;
 }
 
 /**
@@ -51,6 +53,8 @@ export default function Input(props: InputProps) {
     error,
     helper,
     corner,
+    step = "1",
+    disabled = false
   } = props;
 
   return (
@@ -76,6 +80,8 @@ export default function Input(props: InputProps) {
           aria-invalid="true"
           aria-describedby="email-error"
           bind={source[name]}
+          disabled={disabled}
+          step={step}
         />
 
         {error && (
