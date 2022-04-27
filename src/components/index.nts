@@ -5,6 +5,7 @@ export { default as Label } from "./elements/Label.nts";
 export { default as Helper } from "./elements/Helper.nts";
 export { default as ButtonGroup } from "./elements/ButtonGroup.nts";
 export { default as Avatar } from "./elements/Avatar.nts";
+export { default as Preview } from "./elements/Preview.nts";
 
 // Layouts
 export { default as Panel } from "./layouts/Panel.nts";

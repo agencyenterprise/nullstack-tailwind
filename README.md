@@ -131,7 +131,7 @@ Open <http://localhost:3000> to view it in the browser.
 
 #### Avatar
 
-[src/components/elements/Avatar.nts:24-49](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/elements/Avatar.nts#L24-L49 "Source code on GitHub")
+[src/components/elements/Avatar.nts:24-49](https://github.com/fccoelho7/nullstack-tailwind/blob/d9c6d8a0f2b9f295bec2af484d1194226ac68b18/src/components/elements/Avatar.nts#L24-L49 "Source code on GitHub")
 
 ##### Parameters
 
@@ -153,7 +153,7 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 #### Badge
 
-[src/components/elements/Badge.nts:20-34](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/elements/Badge.nts#L20-L34 "Source code on GitHub")
+[src/components/elements/Badge.nts:20-34](https://github.com/fccoelho7/nullstack-tailwind/blob/d9c6d8a0f2b9f295bec2af484d1194226ac68b18/src/components/elements/Badge.nts#L20-L34 "Source code on GitHub")
 
 ##### Parameters
 
@@ -173,7 +173,7 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 #### Button
 
-[src/components/elements/Button.nts:24-40](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/elements/Button.nts#L24-L40 "Source code on GitHub")
+[src/components/elements/Button.nts:24-40](https://github.com/fccoelho7/nullstack-tailwind/blob/d9c6d8a0f2b9f295bec2af484d1194226ac68b18/src/components/elements/Button.nts#L24-L40 "Source code on GitHub")
 
 ##### Parameters
 
@@ -195,7 +195,7 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 #### ButtonGroup
 
-[src/components/elements/ButtonGroup.nts:24-35](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/elements/ButtonGroup.nts#L24-L35 "Source code on GitHub")
+[src/components/elements/ButtonGroup.nts:24-35](https://github.com/fccoelho7/nullstack-tailwind/blob/d9c6d8a0f2b9f295bec2af484d1194226ac68b18/src/components/elements/ButtonGroup.nts#L24-L35 "Source code on GitHub")
 
 ##### Parameters
 
@@ -223,7 +223,7 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 #### Alert
 
-[src/components/feedbacks/Alert.nts:32-120](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/feedbacks/Alert.nts#L32-L120 "Source code on GitHub")
+[src/components/feedbacks/Alert.nts:32-120](https://github.com/fccoelho7/nullstack-tailwind/blob/d9c6d8a0f2b9f295bec2af484d1194226ac68b18/src/components/feedbacks/Alert.nts#L32-L120 "Source code on GitHub")
 
 ##### Parameters
 
@@ -257,7 +257,7 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 #### Checkbox
 
-[src/components/forms/Checkbox.nts:29-70](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/forms/Checkbox.nts#L29-L70 "Source code on GitHub")
+[src/components/forms/Checkbox.nts:29-70](https://github.com/fccoelho7/nullstack-tailwind/blob/d9c6d8a0f2b9f295bec2af484d1194226ac68b18/src/components/forms/Checkbox.nts#L29-L70 "Source code on GitHub")
 
 ##### Parameters
 
@@ -278,7 +278,7 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 #### DatePicker
 
-[src/components/forms/DatePicker.nts:33-62](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/forms/DatePicker.nts#L33-L62 "Source code on GitHub")
+[src/components/forms/DatePicker.nts:33-62](https://github.com/fccoelho7/nullstack-tailwind/blob/d9c6d8a0f2b9f295bec2af484d1194226ac68b18/src/components/forms/DatePicker.nts#L33-L62 "Source code on GitHub")
 
 ##### Parameters
 
@@ -302,7 +302,7 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 #### Input
 
-[src/components/forms/Input.nts:42-106](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/forms/Input.nts#L42-L106 "Source code on GitHub")
+[src/components/forms/Input.nts:44-112](https://github.com/fccoelho7/nullstack-tailwind/blob/d9c6d8a0f2b9f295bec2af484d1194226ac68b18/src/components/forms/Input.nts#L44-L112 "Source code on GitHub")
 
 ##### Parameters
 
@@ -335,7 +335,7 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 #### Radio
 
-[src/components/forms/Radio.nts:28-75](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/forms/Radio.nts#L28-L75 "Source code on GitHub")
+[src/components/forms/Radio.nts:28-75](https://github.com/fccoelho7/nullstack-tailwind/blob/d9c6d8a0f2b9f295bec2af484d1194226ac68b18/src/components/forms/Radio.nts#L28-L75 "Source code on GitHub")
 
 ##### Parameters
 
@@ -357,7 +357,7 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 #### Select
 
-[src/components/forms/Select.nts:34-64](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/forms/Select.nts#L34-L64 "Source code on GitHub")
+[src/components/forms/Select.nts:34-64](https://github.com/fccoelho7/nullstack-tailwind/blob/d9c6d8a0f2b9f295bec2af484d1194226ac68b18/src/components/forms/Select.nts#L34-L64 "Source code on GitHub")
 
 ##### Parameters
 
@@ -384,7 +384,7 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 #### Textarea
 
-[src/components/forms/Textarea.nts:28-61](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/forms/Textarea.nts#L28-L61 "Source code on GitHub")
+[src/components/forms/Textarea.nts:28-61](https://github.com/fccoelho7/nullstack-tailwind/blob/d9c6d8a0f2b9f295bec2af484d1194226ac68b18/src/components/forms/Textarea.nts#L28-L61 "Source code on GitHub")
 
 ##### Parameters
 
@@ -405,7 +405,7 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 #### Toggle
 
-[src/components/forms/Toggle.nts:26-60](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/forms/Toggle.nts#L26-L60 "Source code on GitHub")
+[src/components/forms/Toggle.nts:26-60](https://github.com/fccoelho7/nullstack-tailwind/blob/d9c6d8a0f2b9f295bec2af484d1194226ac68b18/src/components/forms/Toggle.nts#L26-L60 "Source code on GitHub")
 
 ##### Parameters
 
@@ -430,12 +430,13 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 #### Panel
 
-[src/components/layouts/Panel.nts:20-30](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/layouts/Panel.nts#L20-L30 "Source code on GitHub")
+[src/components/layouts/Panel.nts:22-35](https://github.com/fccoelho7/nullstack-tailwind/blob/d9c6d8a0f2b9f295bec2af484d1194226ac68b18/src/components/layouts/Panel.nts#L22-L35 "Source code on GitHub")
 
 ##### Parameters
 
 *   `id` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
 *   `class` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
+*   `title` **[string](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String)?** 
 *   `children` **[Element](https://developer.mozilla.org/docs/Web/API/Element)?** 
 
 ##### Examples
@@ -454,7 +455,7 @@ Returns **[Element](https://developer.mozilla.org/docs/Web/API/Element)**
 
 #### Table
 
-[src/components/lists/Table.nts:37-46](https://github.com/fccoelho7/nullstack-tailwind/blob/986397698025ba49d8702448ba82ed386294f1f9/src/components/lists/Table.nts#L37-L46 "Source code on GitHub")
+[src/components/lists/Table.nts:37-46](https://github.com/fccoelho7/nullstack-tailwind/blob/d9c6d8a0f2b9f295bec2af484d1194226ac68b18/src/components/lists/Table.nts#L37-L46 "Source code on GitHub")
 
 ##### Parameters
 
