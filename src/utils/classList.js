@@ -1,5 +1,3 @@
-function classList(...args) {
-  return args.join(" ");
-}
+import classnames from "classnames";
 
-export default classList;
+export default classnames;

@@ -1,0 +1,48 @@
+import { classList } from "../../utils";
+
+interface BoxProps {
+  children: string;
+  class?: string;
+  id?: string;
+  radius?: "sm" | "md" | "lg";
+  shadow?: "sm" | "md" | "lg";
+  withBorder?: boolean;
+}
+
+/**
+ * @name Box
+ * @param {!Element} children
+ * @param {?boolean} withBorder
+ * @param {?string} class
+ * @param {?string} id
+ * @param {?string} radius
+ * @returns {Element}
+ * @example
+ * import { Box } from "nullstack-tailwind";
+ *
+ * <Box radius="md" shadow="md">Example</Box>
+ */
+
+export default function Box(props: BoxProps) {
+  const { class: klass, children, radius, shadow, withBorder } = props;
+
+  return (
+    <div
+      class={classList(
+        "flex flex-col overflow-hidden",
+        {
+          "rounded-sm": radius === "sm",
+          "rounded-md": radius === "md",
+          "rounded-lg": radius === "lg",
+          "shadow-sm": shadow === "sm",
+          "shadow-md": shadow === "md",
+          "shadow-lg": shadow === "lg",
+          "border border-gray-300": withBorder,
+        },
+        klass
+      )}
+    >
+      {children}
+    </div>
+  );
+}

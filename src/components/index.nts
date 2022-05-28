@@ -6,6 +6,7 @@ export { default as Helper } from "./elements/Helper.nts";
 export { default as ButtonGroup } from "./elements/ButtonGroup.nts";
 export { default as Avatar } from "./elements/Avatar.nts";
 export { default as Preview } from "./elements/Preview.nts";
+export { default as Box } from "./elements/Box.nts";
 
 // Layouts
 export { default as Panel } from "./layouts/Panel.nts";
