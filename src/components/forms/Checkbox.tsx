@@ -16,7 +16,7 @@ interface CheckboxProps {
 
 /**
  * @name Checkbox
- * @param {?string} className
+ * @param {?string} class
  * @param {?string} description
  * @param {?boolean} disabled
  * @param {?string} id

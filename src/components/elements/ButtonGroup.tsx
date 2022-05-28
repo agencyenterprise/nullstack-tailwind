@@ -10,7 +10,7 @@ interface ButtonGroupProps {
  * @name ButtonGroup
  * @param {!Element} children
  * @param {?string} id
- * @param {?string} className
+ * @param {?string} class
  * @returns {Element}
  * @example
  * import { ButtonGroup, Button } from "nullstack-tailwind";

@@ -20,7 +20,7 @@ interface InputProps {
 /**
  * @name Input
  * @param {?string} id
- * @param {?string} className
+ * @param {?string} class
  * @param {?string} placeholder
  * @param {?string} helper
  * @param {?string} corner

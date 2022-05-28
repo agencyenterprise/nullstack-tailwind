@@ -10,7 +10,7 @@ interface BadgeProps {
  * @name Badge
  * @param {!Element} children
  * @param {?string} id
- * @param {?string} className
+ * @param {?string} class
  * @returns {Element}
  * @example
  * import { Badge } from "nullstack-tailwind";

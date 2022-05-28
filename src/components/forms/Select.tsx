@@ -18,7 +18,7 @@ interface SelectProps {
  * @param {?string} label
  * @param {?string} helper
  * @param {?string} id
- * @param {?string} className
+ * @param {?string} class
  * @param {?Element} children
  * @param {?boolean} disabled
  * @returns {Element}

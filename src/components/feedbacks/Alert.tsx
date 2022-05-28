@@ -12,7 +12,7 @@ interface AlertProps {
  * @name Alert
  * @param {?("success" | "info" | "warning" | "danger")} variant
  * @param {?SVGElement} icon
- * @param {?string} className
+ * @param {?string} class
  * @param {?string} id
  * @param {!Element} children
  * @returns {Element}

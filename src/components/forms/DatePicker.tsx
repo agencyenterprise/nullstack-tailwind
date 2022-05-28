@@ -20,7 +20,7 @@ interface DatePickerProps {
  * @param {?boolean} disabled
  * @param {?Element} children
  * @param {?object} config - flatpickr config
- * @param {?string} className
+ * @param {?string} class
  * @param {?string} helper
  * @param {?string} id
  * @param {?string} label

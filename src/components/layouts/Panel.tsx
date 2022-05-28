@@ -10,7 +10,7 @@ interface PanelProps {
 /**
  * @name Panel
  * @param {?string} id
- * @param {?string} className
+ * @param {?string} class
  * @param {?string} title
  * @param {?Element} children
  * @returns {Element}

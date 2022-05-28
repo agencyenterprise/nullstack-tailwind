@@ -1,7 +1,7 @@
 /**
  * @name Table
  * @param {?string} id
- * @param {?string} className
+ * @param {?string} class
  * @param {?Element} children
  * @returns {Element}
  * @example
