@@ -1,7 +1,7 @@
 import { classList } from "../../utils";
 
 interface HelperProps {
-  children: string;
+  children?: string;
   class?: string;
 }
 

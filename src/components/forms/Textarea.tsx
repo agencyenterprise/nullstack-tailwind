@@ -1,16 +1,16 @@
-import Label from "../elements/Label.nts";
-import Helper from "../elements/Helper.nts";
+import Label from "../elements/Label";
+import Helper from "../elements/Helper";
 import { classList } from "../../utils";
 
 interface TextareaProps {
-  class: string;
+  class?: string;
   disabled?: boolean;
   helper?: string;
-  id: string;
+  id?: string;
   label?: string;
-  name: string;
+  name?: string;
   rows?: number;
-  source: string;
+  source?: string;
 }
 
 /**

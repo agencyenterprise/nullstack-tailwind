@@ -1,7 +1,7 @@
 import { classList } from "../../utils";
 
 interface LabelProps {
-  children: string;
+  children?: string;
   class?: string;
   for?: string;
 }

@@ -1,7 +1,7 @@
 import { classList } from "../../utils";
 
 interface ModalProps {
-  children: string;
+  children?: string;
   visible: boolean;
 }
 
@@ -82,7 +82,7 @@ Modal.Close = ({ onclick }: CloseProps) => (
 
 interface ElementsProps {
   class?: string;
-  children: string;
+  children?: string;
 }
 
 Modal.Body = ({ children, class: klass }: ElementsProps) => (

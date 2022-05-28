@@ -1,7 +1,7 @@
 import { classList } from "../../utils";
 
 interface ButtonGroupProps {
-  children: string;
+  children?: string;
   class?: string;
   id?: string;
 }
