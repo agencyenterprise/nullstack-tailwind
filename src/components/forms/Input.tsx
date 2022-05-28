@@ -9,9 +9,9 @@ interface InputProps {
   helper?: string;
   id?: string;
   label?: string;
-  name: string;
+  name?: string;
   placeholder?: string;
-  source: string;
+  source?: string;
   type?: string;
   step?: string;
   disabled?: boolean;

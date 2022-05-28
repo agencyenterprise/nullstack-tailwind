@@ -3,14 +3,14 @@ import Helper from "../elements/Helper";
 import { classList } from "../../utils";
 
 interface TextareaProps {
-  class: string;
+  class?: string;
   disabled?: boolean;
   helper?: string;
-  id: string;
+  id?: string;
   label?: string;
-  name: string;
+  name?: string;
   rows?: number;
-  source: string;
+  source?: string;
 }
 
 /**

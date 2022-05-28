@@ -3,7 +3,7 @@ import Helper from "../elements/Helper";
 import { classList } from "../../utils";
 
 interface SelectProps {
-  children: string;
+  children?: string;
   class: string;
   disabled?: boolean;
   helper?: string;

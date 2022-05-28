@@ -34,7 +34,14 @@
  *  </Table.TBody>
  * </Table>
  */
-const Table = ({ id, children, class: klass }) => (
+
+interface DefaultProps {
+  id?: string;
+  class?: string;
+  children?: string;
+}
+
+const Table = ({ id, children, class: klass }: DefaultProps) => (
   <table
     id={id}
     class={"min-w-full divide-y divide-gray-300 align-middle".concat(
@@ -45,13 +52,13 @@ const Table = ({ id, children, class: klass }) => (
   </table>
 );
 
-Table.THead = ({ children, class: klass }) => (
+Table.THead = ({ children, class: klass }: DefaultProps) => (
   <thead class={"bg-gray-50".concat(klass ? ` ${klass}` : "")}>
     {children}
   </thead>
 );
 
-Table.TH = ({ children, class: klass }) => (
+Table.TH = ({ children, class: klass }: DefaultProps) => (
   <th
     scope="col"
     class={"px-3 py-3.5 text-left text-sm font-semibold text-gray-900".concat(
@@ -62,7 +69,7 @@ Table.TH = ({ children, class: klass }) => (
   </th>
 );
 
-Table.TBody = ({ children, class: klass }) => (
+Table.TBody = ({ children, class: klass }: DefaultProps) => (
   <tbody
     class={"divide-y divide-gray-200 bg-white".concat(klass ? ` ${klass}` : "")}
   >
@@ -70,11 +77,11 @@ Table.TBody = ({ children, class: klass }) => (
   </tbody>
 );
 
-Table.TR = ({ children, class: klass }) => (
+Table.TR = ({ children, class: klass }: DefaultProps) => (
   <tr class={klass ? klass : ""}>{children}</tr>
 );
 
-Table.TD = ({ children, class: klass }) => (
+Table.TD = ({ children, class: klass }: DefaultProps) => (
   <td
     class={"whitespace-nowrap px-3 py-4 text-sm text-gray-500".concat(
       klass ? ` ${klass}` : ""
