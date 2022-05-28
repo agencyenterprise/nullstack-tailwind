@@ -16,7 +16,7 @@ interface RadioProps {
  * @name Radio
  * @param {?string} label
  * @param {?string} id
- * @param {?string} class
+ * @param {?string} className
  * @param {?string} helper
  * @param {?boolean} disabled
  * @returns {Element}

@@ -13,7 +13,7 @@ interface ButtonProps {
  * @param {!Element} children
  * @param {?function} onclick
  * @param {?string} id
- * @param {?string} class
+ * @param {?string} className
  * @param {?string} type
  * @returns {Element}
  * @example

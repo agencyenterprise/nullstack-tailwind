@@ -1,6 +1,6 @@
 import Nullstack from "nullstack";
-import Label from "../elements/Label.nts";
-import Helper from "../elements/Helper.nts";
+import Label from "../elements/Label";
+import Helper from "../elements/Helper";
 import { classList } from "../../utils";
 
 interface CheckboxProps {
@@ -16,7 +16,7 @@ interface CheckboxProps {
 
 /**
  * @name Checkbox
- * @param {?string} class
+ * @param {?string} className
  * @param {?string} description
  * @param {?boolean} disabled
  * @param {?string} id

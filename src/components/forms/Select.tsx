@@ -1,5 +1,5 @@
-import Label from "../elements/Label.nts";
-import Helper from "../elements/Helper.nts";
+import Label from "../elements/Label";
+import Helper from "../elements/Helper";
 import { classList } from "../../utils";
 
 interface SelectProps {
@@ -18,7 +18,7 @@ interface SelectProps {
  * @param {?string} label
  * @param {?string} helper
  * @param {?string} id
- * @param {?string} class
+ * @param {?string} className
  * @param {?Element} children
  * @param {?boolean} disabled
  * @returns {Element}

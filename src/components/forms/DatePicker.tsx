@@ -1,7 +1,7 @@
 import Nullstack from "nullstack";
 
-import Label from "../elements/Label.nts";
-import Helper from "../elements/Helper.nts";
+import Label from "../elements/Label";
+import Helper from "../elements/Helper";
 import { classList } from "../../utils";
 
 interface DatePickerProps {
@@ -20,7 +20,7 @@ interface DatePickerProps {
  * @param {?boolean} disabled
  * @param {?Element} children
  * @param {?object} config - flatpickr config
- * @param {?string} class
+ * @param {?string} className
  * @param {?string} helper
  * @param {?string} id
  * @param {?string} label

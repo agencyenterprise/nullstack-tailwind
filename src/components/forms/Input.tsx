@@ -1,5 +1,5 @@
-import Label from "../elements/Label.nts";
-import Helper from "../elements/Helper.nts";
+import Label from "../elements/Label";
+import Helper from "../elements/Helper";
 import { classList } from "../../utils";
 
 interface InputProps {
@@ -20,7 +20,7 @@ interface InputProps {
 /**
  * @name Input
  * @param {?string} id
- * @param {?string} class
+ * @param {?string} className
  * @param {?string} placeholder
  * @param {?string} helper
  * @param {?string} corner
@@ -54,7 +54,7 @@ export default function Input(props: InputProps) {
     helper,
     corner,
     step = "1",
-    disabled = false
+    disabled = false,
   } = props;
 
   return (

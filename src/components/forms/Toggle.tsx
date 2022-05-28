@@ -15,7 +15,7 @@ interface ToggleProps {
  * @name Toggle
  * @param {?string} label
  * @param {?string} id
- * @param {?string} class
+ * @param {?string} className
  * @param {?boolean} disabled
  * @returns {Element}
  * @example

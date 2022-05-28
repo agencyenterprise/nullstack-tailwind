@@ -14,7 +14,7 @@ interface AvatarProps {
  * @param {?string} alt
  * @param {?string} placeholder
  * @param {?string} id
- * @param {?string} class
+ * @param {?string} className
  * @returns {Element}
  * @example
  * import { Avatar } from "nullstack-tailwind";

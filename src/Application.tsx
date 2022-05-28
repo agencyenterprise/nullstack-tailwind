@@ -1,6 +1,6 @@
 import Nullstack from "nullstack";
 import { ApplicationClientContext } from "./types";
-import Container from "./layouts/Container.nts";
+import Container from "./layouts/Container";
 import {
   Alert,
   Avatar,
@@ -18,7 +18,7 @@ import {
   Textarea,
   Toggle,
   Preview,
-} from "./components/index.nts";
+} from "./components";
 
 import "./styles.css";
 
