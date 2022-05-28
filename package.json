@@ -27,6 +27,7 @@
     "vercel-build": "npm run build-nullstack"
   },
   "dependencies": {
+    "classnames": "^2.3.1",
     "flatpickr": "^4.6.11"
   }
 }
