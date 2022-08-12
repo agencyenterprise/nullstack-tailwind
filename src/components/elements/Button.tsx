@@ -1,10 +1,10 @@
 import { classList } from "../../utils";
 
 interface ButtonProps {
-  children: string;
+  children?: string;
   class?: string;
   id?: string;
-  type?: string;
+  type?: "button" | "reset" | "submit";
   onclick?: () => void;
 }
 

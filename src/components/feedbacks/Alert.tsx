@@ -1,11 +1,11 @@
 import { classList } from "../../utils";
 
 interface AlertProps {
-  children: Element;
+  children?: Element;
   class?: string;
   icon?: string;
   id?: string;
-  variant: "success" | "info" | "warning" | "danger";
+  variant?: "success" | "info" | "warning" | "danger";
 }
 
 /**

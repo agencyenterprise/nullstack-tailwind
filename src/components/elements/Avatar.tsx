@@ -5,7 +5,7 @@ interface AvatarProps {
   class?: string;
   id?: string;
   placeholder?: string;
-  src: string;
+  src?: string;
 }
 
 /**
