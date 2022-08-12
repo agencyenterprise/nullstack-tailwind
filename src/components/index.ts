@@ -6,6 +6,7 @@ export { default as Helper } from './elements/Helper';
 export { default as ButtonGroup } from './elements/ButtonGroup';
 export { default as Avatar } from './elements/Avatar';
 export { default as Preview } from './elements/Preview';
+export { default as Card, CardProps } from './elements/Card';
 
 // Layouts
 export { default as Panel } from './layouts/Panel';
