@@ -1,6 +1,6 @@
-import Label from "../elements/Label";
-import Helper from "../elements/Helper";
-import { classList } from "../../utils";
+import { classList } from '../../utils';
+import Helper from '../elements/Helper';
+import Label from '../elements/Label';
 
 interface TextareaProps {
   class?: string;
@@ -26,16 +26,7 @@ interface TextareaProps {
  * <Textarea label="Comments" rows={6} bind={this.user.about} />
  */
 export default function Textarea(props: TextareaProps) {
-  const {
-    id,
-    class: klass,
-    label,
-    name,
-    rows = 4,
-    source,
-    helper,
-    disabled = false,
-  } = props;
+  const { id, class: klass, label, name, rows = 4, source, helper, disabled = false } = props;
   const value = source[name];
 
   return (
@@ -46,7 +37,7 @@ export default function Textarea(props: TextareaProps) {
           rows={rows}
           id={id}
           class={classList(
-            "shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md",
+            'shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md',
             klass
           )}
           disabled={disabled}

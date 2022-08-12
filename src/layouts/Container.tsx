@@ -1,3 +1,5 @@
+import { NullstackNode } from 'nullstack';
+
 const Icon = () => (
   <svg
     class="text-gray-400 group-hover:text-gray-500 mr-3 flex-shrink-0 h-6 w-6"
@@ -16,7 +18,11 @@ const Icon = () => (
   </svg>
 );
 
-export default function Container(props) {
+interface ContainerProps {
+  children?: NullstackNode;
+}
+
+export default function Container(props: ContainerProps) {
   return (
     <div class="md:flex bg-gray-50">
       <div class="md:flex md:w-64 md:flex-col md:fixed md:inset-y-0">

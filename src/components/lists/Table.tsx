@@ -35,60 +35,38 @@
  * </Table>
  */
 
+import { NullstackNode } from 'nullstack';
+
 interface DefaultProps {
   id?: string;
   class?: string;
-  children?: string;
+  children?: NullstackNode;
 }
 
 const Table = ({ id, children, class: klass }: DefaultProps) => (
-  <table
-    id={id}
-    class={"min-w-full divide-y divide-gray-300 align-middle".concat(
-      klass ? ` ${klass}` : ""
-    )}
-  >
+  <table id={id} class={'min-w-full divide-y divide-gray-300 align-middle'.concat(klass ? ` ${klass}` : '')}>
     {children}
   </table>
 );
 
 Table.THead = ({ children, class: klass }: DefaultProps) => (
-  <thead class={"bg-gray-50".concat(klass ? ` ${klass}` : "")}>
-    {children}
-  </thead>
+  <thead class={'bg-gray-50'.concat(klass ? ` ${klass}` : '')}>{children}</thead>
 );
 
 Table.TH = ({ children, class: klass }: DefaultProps) => (
-  <th
-    scope="col"
-    class={"px-3 py-3.5 text-left text-sm font-semibold text-gray-900".concat(
-      klass
-    )}
-  >
+  <th scope="col" class={'px-3 py-3.5 text-left text-sm font-semibold text-gray-900'.concat(klass)}>
     {children}
   </th>
 );
 
 Table.TBody = ({ children, class: klass }: DefaultProps) => (
-  <tbody
-    class={"divide-y divide-gray-200 bg-white".concat(klass ? ` ${klass}` : "")}
-  >
-    {children}
-  </tbody>
+  <tbody class={'divide-y divide-gray-200 bg-white'.concat(klass ? ` ${klass}` : '')}>{children}</tbody>
 );
 
-Table.TR = ({ children, class: klass }: DefaultProps) => (
-  <tr class={klass ? klass : ""}>{children}</tr>
-);
+Table.TR = ({ children, class: klass }: DefaultProps) => <tr class={klass ? klass : ''}>{children}</tr>;
 
 Table.TD = ({ children, class: klass }: DefaultProps) => (
-  <td
-    class={"whitespace-nowrap px-3 py-4 text-sm text-gray-500".concat(
-      klass ? ` ${klass}` : ""
-    )}
-  >
-    {children}
-  </td>
+  <td class={'whitespace-nowrap px-3 py-4 text-sm text-gray-500'.concat(klass ? ` ${klass}` : '')}>{children}</td>
 );
 
 export default Table;

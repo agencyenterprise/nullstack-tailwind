@@ -1,7 +1,9 @@
-import { classList } from "../../utils";
+import { NullstackNode } from 'nullstack';
+
+import { classList } from '../../utils';
 
 interface BadgeProps {
-  children?: string;
+  children?: NullstackNode;
   class?: string;
   id?: string;
 }
@@ -21,13 +23,7 @@ export default function Badge(props: BadgeProps) {
   const { id, class: klass, children } = props;
 
   return (
-    <span
-      id={id}
-      class={classList(
-        `inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium`,
-        klass
-      )}
-    >
+    <span id={id} class={classList(`inline-flex items-center px-3 py-0.5 rounded-full text-sm font-medium`, klass)}>
       {children}
     </span>
   );

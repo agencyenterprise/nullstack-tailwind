@@ -1,16 +1,18 @@
-import Label from "../elements/Label";
-import Helper from "../elements/Helper";
-import { classList } from "../../utils";
+import { NullstackNode } from 'nullstack';
+
+import { classList } from '../../utils';
+import Helper from '../elements/Helper';
+import Label from '../elements/Label';
 
 interface SelectProps {
-  children?: string;
-  class: string;
+  children?: NullstackNode;
+  class?: string;
   disabled?: boolean;
   helper?: string;
-  id: string;
+  id?: string;
   label?: string;
-  name: string;
-  source: string;
+  name?: string;
+  source?: string;
 }
 
 /**
@@ -32,16 +34,7 @@ interface SelectProps {
  * </Select>
  */
 export default function Select(props: SelectProps) {
-  const {
-    id,
-    class: klass,
-    label,
-    name,
-    source,
-    children,
-    helper,
-    disabled,
-  } = props;
+  const { id, class: klass, label, name, source, children, helper, disabled } = props;
 
   return (
     <div>
@@ -50,7 +43,7 @@ export default function Select(props: SelectProps) {
         id={id}
         name={name}
         class={classList(
-          "mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md",
+          'mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md',
           klass
         )}
         bind={source[name]}

@@ -1,8 +1,10 @@
-import { classList } from "../../utils";
+import { NullstackNode } from 'nullstack';
+
+import { classList } from '../../utils';
 
 interface PanelProps {
   title?: string;
-  children?: string;
+  children?: NullstackNode;
   class?: string;
   id?: string;
 }
@@ -23,10 +25,8 @@ export default function Panel(props: PanelProps) {
   const { children, id, class: klass, title } = props;
 
   return (
-    <div id={id} class={classList("w-full", klass)}>
-      {title && (
-        <h2 class="text-2xl mb-4 font-semibold text-gray-800">{title}</h2>
-      )}
+    <div id={id} class={classList('w-full', klass)}>
+      {title && <h2 class="text-2xl mb-4 font-semibold text-gray-800">{title}</h2>}
       <div class="bg-white overflow-hidden shadow rounded-md">
         <div class="px-4 py-5 sm:p-6">{children}</div>
       </div>
