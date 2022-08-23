@@ -19,6 +19,10 @@
 
     "sort-imports": ["warn", { "ignoreCase": true, "ignoreDeclarationSort": true }],
 
+    // @typescript-eslint
+
+    "@typescript-eslint/no-var-requires": "off",
+
     // import
 
     "import/order": [

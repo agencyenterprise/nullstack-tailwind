@@ -22,6 +22,7 @@ export { default as Select } from './forms/Select';
 export { default as Checkbox } from './forms/Checkbox';
 export { default as Radio } from './forms/Radio';
 export { default as DatePicker } from './forms/DatePicker';
+export { default as Slider, SliderProps } from './forms/Slider';
 
 // Feedbacks
 export { default as Alert } from './feedbacks/Alert';

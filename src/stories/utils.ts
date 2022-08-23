@@ -1,27 +1,28 @@
 import client from 'nullstack/client/client';
-import page from 'nullstack/client/page';
+import environment from 'nullstack/client/environment';
 import render from 'nullstack/client/render';
-import router from 'nullstack/client/router';
 import generateTree from 'nullstack/shared/generateTree';
 
 export function renderComponent<T>(component: T) {
+  const source = client;
+
   const wrapper = document.createElement('div');
 
-  const scope = client;
+  source.initializer = () => component;
+  source.context.environment = environment;
+  source.hydrationQueue = Object.values(source.instances);
 
-  scope.context = {
-    page: page,
-    router: router,
-    settings: {},
-    worker: {},
-    params: {},
-    project: {},
-    environment: {},
-  };
+  generateTree(component, source).then((tree: unknown) => {
+    source.virtualDom = tree;
+    source.selector = render(source.virtualDom);
 
-  generateTree(component, scope).then((tree: unknown) => {
-    const el = render(tree);
-    wrapper.appendChild(el);
+    source.processLifecycleQueues().then(() => {
+      setTimeout(() => {
+        if (wrapper) {
+          wrapper.appendChild(source.selector);
+        }
+      }, 50);
+    });
   });
 
   return wrapper;
