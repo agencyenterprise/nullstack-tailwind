@@ -1,11 +1,11 @@
-import { classList } from "../../utils";
+import { classList } from '../../utils';
 
 interface AlertProps {
   children?: Element;
   class?: string;
   icon?: string;
   id?: string;
-  variant?: "success" | "info" | "warning" | "danger";
+  variant?: 'success' | 'info' | 'warning' | 'danger';
 }
 
 /**
@@ -30,11 +30,11 @@ interface AlertProps {
  * </Alert>
  */
 export default function Alert(props: AlertProps) {
-  const { variant = "info", icon, children, id, class: klass } = props;
+  const { variant = 'info', icon, children, id, class: klass } = props;
 
   const variants = {
     info: {
-      color: "bg-blue-50",
+      color: 'bg-blue-50',
       icon: (
         <svg
           class="h-5 w-5 text-blue-400"
@@ -52,7 +52,7 @@ export default function Alert(props: AlertProps) {
       ),
     },
     success: {
-      color: "bg-green-50",
+      color: 'bg-green-50',
       icon: (
         <svg
           class="h-5 w-5 text-green-400"
@@ -70,7 +70,7 @@ export default function Alert(props: AlertProps) {
       ),
     },
     warning: {
-      color: "bg-yellow-50",
+      color: 'bg-yellow-50',
       icon: (
         <svg
           class="h-5 w-5 text-yellow-400"
@@ -88,7 +88,7 @@ export default function Alert(props: AlertProps) {
       ),
     },
     danger: {
-      color: "bg-red-50",
+      color: 'bg-red-50',
       icon: (
         <svg
           class="h-5 w-5 text-red-400"
@@ -113,7 +113,7 @@ export default function Alert(props: AlertProps) {
     <div id={id} class={`rounded-md bg-blue-50 ${currentVariant.color} p-4`}>
       <div class="flex">
         <div class="flex-shrink-0">{icon || currentVariant.icon}</div>
-        <div class={classList("ml-3 ", klass)}>{children}</div>
+        <div class={classList('ml-3 ', klass)}>{children}</div>
       </div>
     </div>
   );

@@ -1,7 +1,9 @@
-import { classList } from "../../utils";
+import { NullstackNode } from 'nullstack';
+
+import { classList } from '../../utils';
 
 interface ButtonGroupProps {
-  children?: string;
+  children?: NullstackNode;
   class?: string;
   id?: string;
 }
@@ -25,10 +27,7 @@ export default function ButtonGroup(props: ButtonGroupProps) {
   const { id, class: klass, children } = props;
 
   return (
-    <span
-      id={id}
-      class={classList("relative z-0 inline-flex shadow-sm rounded-md", klass)}
-    >
+    <span id={id} class={classList('relative z-0 inline-flex shadow-sm rounded-md', klass)}>
       {children}
     </span>
   );

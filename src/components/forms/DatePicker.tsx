@@ -1,8 +1,8 @@
-import Nullstack from "nullstack";
+import Nullstack from 'nullstack';
 
-import Label from "../elements/Label";
-import Helper from "../elements/Helper";
-import { classList } from "../../utils";
+import { classList } from '../../utils';
+import Helper from '../elements/Helper';
+import Label from '../elements/Label';
 
 interface DatePickerProps {
   class: string;
@@ -32,8 +32,8 @@ interface DatePickerProps {
  */
 class DatePicker extends Nullstack {
   async hydrate({ self, config }) {
-    const { default: flatpickr } = await import("flatpickr");
-    flatpickr(self.element.querySelector("[data-date-picker]"), config);
+    const { default: flatpickr } = await import('flatpickr');
+    flatpickr(self.element.querySelector('[data-date-picker]'), config);
   }
   render(props: DatePickerProps) {
     const { label, helper, id, class: klass, source, name, disabled } = props;
@@ -46,7 +46,7 @@ class DatePicker extends Nullstack {
         <div class="mt-1 relative rounded-md shadow-sm">
           <input
             class={classList(
-              "shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md focus:outline-none",
+              'shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md focus:outline-none',
               klass
             )}
             type="text"

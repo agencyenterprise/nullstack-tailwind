@@ -1,7 +1,8 @@
-import Nullstack from "nullstack";
-import Label from "../elements/Label";
-import Helper from "../elements/Helper";
-import { classList } from "../../utils";
+import Nullstack from 'nullstack';
+
+import { classList } from '../../utils';
+import Helper from '../elements/Helper';
+import Label from '../elements/Label';
 
 interface CheckboxProps {
   class?: string;
@@ -33,15 +34,7 @@ class Checkbox extends Nullstack {
   }
 
   render(props: CheckboxProps) {
-    const {
-      label,
-      description,
-      name,
-      source,
-      disabled,
-      id,
-      class: klass,
-    } = props;
+    const { label, description, name, source, disabled, id, class: klass } = props;
     const checked = source[name];
 
     return (
@@ -51,10 +44,7 @@ class Checkbox extends Nullstack {
             id={id}
             aria-describedby={id}
             type="checkbox"
-            class={classList(
-              "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded",
-              klass
-            )}
+            class={classList('focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300 rounded', klass)}
             checked={checked}
             disabled={disabled}
             onclick={!disabled && this.toggle}

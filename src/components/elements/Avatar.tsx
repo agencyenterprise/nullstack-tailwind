@@ -1,4 +1,4 @@
-import { classList } from "../../utils";
+import { classList } from '../../utils';
 
 interface AvatarProps {
   alt?: string;
@@ -26,24 +26,11 @@ export default function Avatar(props: AvatarProps) {
 
   if (placeholder) {
     return (
-      <span
-        id={id}
-        class={classList(
-          `inline-flex items-center justify-center rounded-full bg-gray-500`,
-          klass
-        )}
-      >
+      <span id={id} class={classList(`inline-flex items-center justify-center rounded-full bg-gray-500`, klass)}>
         <span class="font-medium leading-none text-white">{placeholder}</span>
       </span>
     );
   }
 
-  return (
-    <img
-      id={id}
-      class={classList(`inline-block rounded-full`, klass)}
-      src={src}
-      alt={alt}
-    />
-  );
+  return <img id={id} class={classList(`inline-block rounded-full`, klass)} src={src} alt={alt} />;
 }

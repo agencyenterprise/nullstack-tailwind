@@ -1,7 +1,7 @@
 module.exports = {
-  content: ["./src/**/*.tsx"],
+  content: ['./src/**/*.tsx'],
   theme: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/typography"), require("@tailwindcss/forms")],
+  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
 };

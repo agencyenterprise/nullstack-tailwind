@@ -1,6 +1,6 @@
-import Label from "../elements/Label";
-import Helper from "../elements/Helper";
-import { classList } from "../../utils";
+import { classList } from '../../utils';
+import Helper from '../elements/Helper';
+import Label from '../elements/Label';
 
 interface InputProps {
   class?: string;
@@ -46,14 +46,14 @@ export default function Input(props: InputProps) {
     label,
     id,
     class: klass,
-    type = "text",
+    type = 'text',
     placeholder,
     name,
     source,
     error,
     helper,
     corner,
-    step = "1",
+    step = '1',
     disabled = false,
   } = props;
 
@@ -71,9 +71,8 @@ export default function Input(props: InputProps) {
           name={name}
           id={id}
           class={classList(
-            "shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md focus:outline-none",
-            error &&
-              " border-red-300 text-red-900 placeholder-red-300 focus:ring-red-500 focus:border-red-500",
+            'shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block w-full sm:text-sm border-gray-300 rounded-md focus:outline-none',
+            error && ' border-red-300 text-red-900 placeholder-red-300 focus:ring-red-500 focus:border-red-500',
             klass
           )}
           placeholder={placeholder}
@@ -102,11 +101,7 @@ export default function Input(props: InputProps) {
           </div>
         )}
       </div>
-      {error ? (
-        <p class="mt-2 text-sm text-red-600">{error}</p>
-      ) : (
-        helper && <Helper>{helper}</Helper>
-      )}
+      {error ? <p class="mt-2 text-sm text-red-600">{error}</p> : helper && <Helper>{helper}</Helper>}
     </div>
   );
 }

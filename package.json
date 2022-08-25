@@ -5,16 +5,6 @@
   "author": "",
   "license": "ISC",
   "main": "./src/components/index.nts",
-  "devDependencies": {
-    "@tailwindcss/forms": "^0.5.0",
-    "@tailwindcss/typography": "^0.5.2",
-    "autoprefixer": "^10.4.4",
-    "concurrently": "^7.0.0",
-    "documentation": "^13.2.5",
-    "nullstack": "^0.15.10",
-    "postcss": "^8.4.12",
-    "tailwindcss": "^3.0.23"
-  },
   "scripts": {
     "start-nullstack": "npx nullstack start",
     "build-nullstack": "npx nullstack build --mode=ssr",
@@ -24,9 +14,44 @@
     "doc:md": "npx documentation readme --config documentation.yml ./src/components --parse-extension nts -f md --github --section=API",
     "doc:html": "npx documentation build --config documentation.yml ./src/components --parse-extension nts -f html --github -o docs",
     "doc": "concurrently \"npm run doc:md\" \"npm run doc:html\"",
-    "vercel-build": "npm run build-nullstack"
+    "vercel-build": "npm run build-nullstack",
+    "lint": "tsc --noEmit && eslint \"**/*.{ts,nts,tsx}\" --fix",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "start-storybook": "concurrently \"npm run start-tailwind\" \"npm run storybook\""
   },
   "dependencies": {
+    "classnames": "^2.3.1",
     "flatpickr": "^4.6.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.10",
+    "@storybook/addon-actions": "^6.5.10",
+    "@storybook/addon-essentials": "^6.5.10",
+    "@storybook/addon-interactions": "^6.5.10",
+    "@storybook/addon-links": "^6.5.10",
+    "@storybook/builder-webpack5": "^6.5.10",
+    "@storybook/html": "^6.5.10",
+    "@storybook/manager-webpack5": "^6.5.10",
+    "@storybook/testing-library": "^0.0.13",
+    "@tailwindcss/forms": "^0.5.0",
+    "@tailwindcss/typography": "^0.5.2",
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "@typescript-eslint/parser": "^5.33.0",
+    "autoprefixer": "^10.4.4",
+    "babel-loader": "^8.2.5",
+    "concurrently": "^7.0.0",
+    "documentation": "^13.2.5",
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "nullstack": "^0.15.10",
+    "postcss": "^8.4.12",
+    "prettier": "^2.7.1",
+    "swc-loader": "^0.2.3",
+    "tailwindcss": "^3.0.23",
+    "typescript": "^4.7.4"
   }
 }

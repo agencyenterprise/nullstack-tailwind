@@ -1,5 +1,6 @@
-import Nullstack from "nullstack";
-import { classList } from "../../utils";
+import Nullstack from 'nullstack';
+
+import { classList } from '../../utils';
 
 interface RadioProps {
   class?: string;
@@ -32,15 +33,7 @@ class Radio extends Nullstack {
   }
 
   render(props: RadioProps) {
-    const {
-      id,
-      class: klass,
-      label,
-      name,
-      source,
-      helper,
-      disabled = false,
-    } = props;
+    const { id, class: klass, label, name, source, helper, disabled = false } = props;
     const checked = !!source[name];
 
     return (
@@ -51,10 +44,7 @@ class Radio extends Nullstack {
             name={name}
             type="radio"
             checked={checked}
-            class={classList(
-              "focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300",
-              klass
-            )}
+            class={classList('focus:ring-indigo-500 h-4 w-4 text-indigo-600 border-gray-300', klass)}
             onclick={this.toggle}
             disabled={disabled}
           />
