@@ -1,4 +1,6 @@
-@import url("https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css");
+@import url('flatpickr/dist/flatpickr.min.css');
+
+@import url('nouislider/dist/nouislider.css');
 
 /*
 ! tailwindcss v3.0.23 | MIT License | https://tailwindcss.com
@@ -1936,6 +1938,13 @@ select{
   to{
     opacity: 1;
   }
+}
+
+/* Slider */
+
+.noUi-connect{
+  --tw-bg-opacity: 1;
+  background-color: rgb(99 102 241 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-gray-50:hover{

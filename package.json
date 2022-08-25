@@ -22,7 +22,8 @@
   },
   "dependencies": {
     "classnames": "^2.3.1",
-    "flatpickr": "^4.6.11"
+    "flatpickr": "^4.6.11",
+    "nouislider": "^15.6.1"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
@@ -47,7 +48,7 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-unused-imports": "^2.0.0",
-    "nullstack": "^0.15.10",
+    "nullstack": "^0.16.0",
     "postcss": "^8.4.12",
     "prettier": "^2.7.1",
     "swc-loader": "^0.2.3",

@@ -5,6 +5,44 @@ function getLoader(loader) {
   return path.join(nullstackPath, 'loaders', loader);
 }
 
+const swcJavascript = {
+  test: /\.js$/,
+  use: {
+    loader: require.resolve('swc-loader'),
+    options: {
+      jsc: {
+        parser: {
+          syntax: 'ecmascript',
+          exportDefaultFrom: true,
+        },
+      },
+      env: {
+        targets: { node: '10' },
+      },
+    },
+  },
+  exclude: /node_modules/,
+};
+
+const swcTypescript = {
+  test: /\.ts$/,
+  use: {
+    loader: require.resolve('swc-loader'),
+    options: {
+      jsc: {
+        parser: {
+          syntax: 'typescript',
+          exportDefaultFrom: true,
+        },
+      },
+      env: {
+        targets: { node: '10' },
+      },
+    },
+  },
+  exclude: /node_modules/,
+};
+
 const nullstackJavascript = {
   test: /\.(njs|nts|jsx|tsx)$/,
   use: {
@@ -66,6 +104,10 @@ module.exports = {
     builder: '@storybook/builder-webpack5',
   },
   webpackFinal: (config) => {
+    config.module.rules = config.module.rules.filter(
+      (rule) => !['/\\.(mjs|tsx?|jsx?)$/', '/\\.js$/', '/\\.js$/'].includes(rule.test?.toString())
+    );
+
     config.module.rules.unshift(
       {
         test: /nullstack.js$/,
@@ -79,6 +121,7 @@ module.exports = {
           ],
         },
       },
+      swcJavascript,
       nullstackJavascript,
       {
         test: /\.(njs|nts|jsx|tsx)$/,
@@ -92,6 +135,7 @@ module.exports = {
         test: /\.(njs|nts|jsx|tsx)$/,
         loader: getLoader('remove-static-from-client.js'),
       },
+      swcTypescript,
       nullstackTypescript,
       {
         test: /\.(njs|nts|jsx|tsx)$/,
@@ -100,6 +144,10 @@ module.exports = {
       {
         test: /\.(njs|nts|jsx|tsx)$/,
         loader: getLoader('register-inner-components.js'),
+      },
+      {
+        test: /\.(njs|nts|jsx|tsx)$/,
+        loader: getLoader('transform-node-ref.js'),
       }
     );
 
